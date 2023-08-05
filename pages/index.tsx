@@ -13,7 +13,7 @@ const Homepage: NextPage = () => {
     
         
 
-<Default pageName="SKY GODZ-We Were Never Alone">
+<Default pageName="IMMORTAL COIL">
 
 <Home />
 
@@ -24,4 +24,4 @@ const Homepage: NextPage = () => {
   );
 };
 
-export default Home;
+export default Homepage;

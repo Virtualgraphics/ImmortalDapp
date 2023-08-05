@@ -1,6 +1,6 @@
 import { FC, ReactNode } from 'react';
 
-
+import { NavBar } from '../../modules/navbar';
 import { Footer } from '../../modules/footer';
 import Head from 'next/head';
 
@@ -14,7 +14,7 @@ const Default: FC<{ children: ReactNode; pageName: string }> = ({ children, page
     </Head>
 
 
-   
+    <NavBar/>
 
 
     <div className="w-full h-full p-0 m-0 ">

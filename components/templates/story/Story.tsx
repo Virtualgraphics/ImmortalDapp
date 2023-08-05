@@ -6,7 +6,7 @@ const Story = () => {
       
     <div>
         <p className="text-yellow-100 mb-1 text-3xl font-semibold tracking-wide uppercase md:mb-2">
-   Webtoons
+   The Story
     </p>
     
     </div>

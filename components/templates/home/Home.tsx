@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Hero } from '../hero';
 
 
 
@@ -9,7 +10,7 @@ import * as React from 'react'
 
         <div>  
 
-     
+<Hero />
       
      
      </div>
