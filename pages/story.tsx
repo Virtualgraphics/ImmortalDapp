@@ -1,14 +1,14 @@
 import { Default } from '../components/layouts/Default';
-import { Webtoon } from '../components/templates/webtoon';
+import { Story } from '../components/templates/story';
 import type { NextPage } from 'next';
 
-const WEBTOON: NextPage = () => {
+const STORY: NextPage = () => {
   return (
 
 
     <Default pageName="Token">
 
-    <Webtoon />
+    <Story />
 
   </Default>
 
@@ -17,4 +17,4 @@ const WEBTOON: NextPage = () => {
   );
 };
 
-export default WEBTOON;
+export default STORY;

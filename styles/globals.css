@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Metamorphous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 
 @import "tailwindcss/base";
 @import "tailwindcss/components";
@@ -9,6 +11,9 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Inter", sans-serif;
+  font-family: 'Metamorphous', cursive;
+  font-family: 'Jost', sans-serif;
+
   width: 100%; 
   height: 100%;  
   background-image: linear-gradient(#200000, #790000) ;
@@ -24,7 +29,7 @@ a {
   box-sizing: border-box;
 }
 
-body {
-  color: #e7e8e8;
- 
+p {
+
+  color: #fff9ae;
 }
