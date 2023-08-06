@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Hero } from '../hero';
 import { Intro } from '../intro';
+import FrontSlider from '../frontslider/Frontslider';
 
 
 
@@ -11,7 +12,7 @@ import { Intro } from '../intro';
     return ( 
 
         <div>  
-
+<FrontSlider/>
 <Hero />
 <Intro />
      

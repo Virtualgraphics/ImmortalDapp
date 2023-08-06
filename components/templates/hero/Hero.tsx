@@ -11,15 +11,15 @@ const Hero = () => {
         <div className="grid gap-10 lg:grid-cols-2">
           <div className="lg:pr-10">
             
-            <h1 className="mb-4 text-4xl font-extrabold leading-none text-yellow-100 font-Cinzel" >
+            <h1 className="mb-4 text-4xl font-extrabold leading-none text-yellow-100 font-Metamorphous" >
               IMMORTAL COIL
               <br className="hidden md:block" /> </h1>
 
-              <h5 className="mb-4 text-2xl font-extrabold leading-none text-white font-Cinzel" >
+              <h5 className="mb-4 text-2xl font-extrabold leading-none text-white font-Jost" >
               Vampire Survival Game
               
             </h5>
-            <p className="mb-6 text-white font-semibold">
+            <p className="mb-6 text-white font-Jost">
             Kai, a royal and very old vampire, must rescue his made Vampire consort Cirice from the clutches of Necrocorvo at Frosthaven Castle and get enough blood to sustain himself. The game is using
             cutting edge blockchain technology in combination with a story-driven, 
             multi-player RPG Metaverse, elements of DeFi and visual novels.

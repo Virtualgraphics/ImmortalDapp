@@ -12,7 +12,10 @@ module.exports = {
 
     extend: {
 
- 
+      fontFamily: {
+        Metamorphus: ["Metamorphous","cursive"],
+        Jost: ["Jost", "sans-serif"],
+      },
 
 
     },

@@ -10,13 +10,11 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Inter", sans-serif;
-  font-family: 'Metamorphous', cursive;
-  font-family: 'Jost', sans-serif;
+ 
 
   width: 100%; 
   height: 100%;  
-  background-image: linear-gradient(#200000, #790000) ;
+  background-image:  linear-gradient(#200000, #790000) ;
   
 }
 
@@ -39,6 +37,7 @@ p {
   width: 100%;
   font-family: 'Metamorphous', cursive;
   font-family: 'Jost', sans-serif;
+  
 }
 
 .connect {

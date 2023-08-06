@@ -5,7 +5,7 @@ const Intro = () => {
     return (
       <div className="px-4 py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <div className="max-w-xl mb-6 sm:mx-auto sm:text-center md:mb-10 lg:max-w-2xl">
-          <p className="text-yellow-100 mb-1 text-3xl font-semibold tracking-wide uppercase md:mb-2 font-Cinzel">
+          <p className="text-yellow-100 mb-1 text-3xl font-semibold tracking-wide uppercase md:mb-2 font-Metamorphous">
          Immortal NFT Game and Collection
           </p>
           <p className="text-base font-semibold text-white md:text-lg">
@@ -21,7 +21,7 @@ const Intro = () => {
               width={1260}
               height={750}
             />
-            <p className=" flex items-center justify-center m-auto text-yellow-100 mb-2 text-xl font-bold leading-none sm:text-2xl">
+            <p className=" flex items-center justify-center m-auto text-yellow-100 mb-2 text-xl font-bold leading-none sm:text-2xl font-Metamorphous">
               IMMORTAL COIL RPG
             </p>
             <p className="text-white text-center justify-center font-semibold">
@@ -45,7 +45,7 @@ const Intro = () => {
               width={1260}
               height={750}
             />
-            <h5 className="flex items-center justify-center m-auto text-yellow-100 mb-2 text-xl font-bold leading-none sm:text-2xl">
+            <h5 className="flex items-center justify-center m-auto text-yellow-100 mb-2 text-xl font-bold leading-none sm:text-2xl font-Metamorphous">
              IMMORTAL COIL DEFI
             </h5>
             <p className="text-white text-center font-semibold">
@@ -64,7 +64,7 @@ const Intro = () => {
               width={1260}
               height={750}
             />
-            <h5 className="flex items-center justify-center m-auto text-yellow-100 mb-2 text-xl font-bold leading-none sm:text-2xl">
+            <h5 className="flex items-center justify-center m-auto text-yellow-100 mb-2 text-xl font-bold leading-none sm:text-2xl font-Metamorphous">
               IMMORTAL COIL WEBTOON
             </h5>
             <p className="text-white text-center font-semibold">
