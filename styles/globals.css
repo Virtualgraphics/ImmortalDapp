@@ -33,3 +33,15 @@ p {
 
   color: #fff9ae;
 }
+
+.app {
+  height: 100%;
+  width: 100%;
+  font-family: 'Metamorphous', cursive;
+  font-family: 'Jost', sans-serif;
+}
+
+.connect {
+  margin-bottom: 2rem;
+  width: 230px;
+}
