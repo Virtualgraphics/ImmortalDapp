@@ -6,7 +6,7 @@ const WEBTOON: NextPage = () => {
   return (
 
 
-    <Default pageName="Token">
+    <Default pageName="Webtoon">
 
     <Webtoon />
 

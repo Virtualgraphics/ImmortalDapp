@@ -13,7 +13,7 @@ module.exports = {
     extend: {
 
       fontFamily: {
-        Metamorphus: ["Metamorphous","cursive"],
+        Metamorphous: ["Metamorphous","cursive"],
         Jost: ["Jost", "sans-serif"],
       },
 

@@ -11,7 +11,7 @@ import FrontSlider from '../frontslider/Frontslider';
   const Home = () => {
     return ( 
 
-        <div>  
+        <div className="bg-no-repeat">  
 <FrontSlider/>
 <Hero />
 <Intro />

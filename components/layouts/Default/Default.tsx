@@ -17,7 +17,7 @@ const Default: FC<{ children: ReactNode; pageName: string }> = ({ children, page
     <NavBar/>
 
 
-    <div className="w-full h-full p-0 m-0 ">
+    <div className="w-full h-full p-0 m-0 bg-gradient-to-b from-black to-red-800" >
       {children}
     </div>
 
