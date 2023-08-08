@@ -68,7 +68,7 @@ const Intro = () => {
               Immortal Coil Webtoons
             </h5>
             <p className="text-white text-center">
-            Read the exciting story of Kai's battle as an immortal Vampire and earn tokens by participating.
+            Read the exciting story of Kais battle as an immortal Vampire and earn tokens by participating.
             </p>
             <div className=" flex items-center justify-center py-4">
             
