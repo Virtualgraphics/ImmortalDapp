@@ -22,7 +22,7 @@ const Intro = () => {
               height={750}
             />
             <p className=" flex items-center justify-center m-auto text-yellow-100 mb-2 text-lg  leading-none sm:text-2xl font-Metamorphous">
-              IMMORTAL COIL RPG
+              Immortal Coil RPG
             </p>
             <p className="text-white text-center justify-center ">
             Play the fun and immersive Immortal RPG game on your PC, the web or on your mobile device.
@@ -30,7 +30,7 @@ const Intro = () => {
 
             <div className=" flex items-center justify-center py-4">
             <Link href="/games">
-            <button className="bg-red-950 hover:bg-black text-yellow-200  w-40 h-10  px-4 rounded mt-1">
+            <button className="bg-red-950 hover:bg-black text-yellow-200  w-40 h-12  px-4 rounded mt-1">
   Find out more
 </button></Link></div>
 
@@ -46,13 +46,13 @@ const Intro = () => {
               height={750}
             />
             <h5 className="flex items-center justify-center m-auto text-yellow-100 mb-2 text-lg  leading-none sm:text-2xl font-Metamorphous">
-             IMMORTAL COIL DEFI
+             Immortal Coil DeFi
             </h5>
             <p className="text-white text-center ">
             Hunt down innocent victims and level up your blood level by drinking their blood. 
             </p>
             <div className=" flex items-center justify-center py-4">
-            <button className="bg-red-950 hover:bg-black text-yellow-200  w-40 h-10  px-4 rounded mt-1">
+            <button className="bg-red-950 hover:bg-black text-yellow-200  w-40 h-12  px-4 rounded mt-1">
  Coming soon
 </button> </div>
           </div>
@@ -65,14 +65,14 @@ const Intro = () => {
               height={750}
             />
             <h5 className="flex items-center justify-center m-auto text-yellow-100 mb-2 text-lg  leading-none sm:text-2xl font-Metamorphous">
-              IMMORTAL COIL WEBTOON
+              Immortal Coil Webtoons
             </h5>
             <p className="text-white text-center">
             Read the exciting story of Kai's battle as an immortal Vampire and earn tokens by participating.
             </p>
             <div className=" flex items-center justify-center py-4">
             
-            <button className="bg-red-950 hover:bg-black text-yellow-200  w-40 h-10  px-4 rounded mt-1">
+            <button className="bg-red-950 hover:bg-black text-yellow-200  w-40 h-12  px-4 rounded mt-1">
   Coming soon
 </button> </div>
           </div>
