@@ -24,7 +24,7 @@ const Story = () => {
           <hr className="w-4/6 mx-auto  border-yellow-200" />
           <p className="text-base text-yellow-100 lg:text-2xl  md:text-lg sm:px-4 py-8 font-Jost">
         
-          "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+          Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
           </p>
 
 
