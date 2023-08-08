@@ -30,7 +30,7 @@ const Hero = () => {
          
 
 <Link href="/nftmint">
-<button className="bg-red-800 hover:bg-red-900 text-yellow-200  w-40 h-10  px-4 rounded mt-1">
+<button className="bg-red-800 hover:bg-red-900 text-yellow-200  w-40 h-11  px-4 rounded mt-1">
             Get Started</button>
             </Link>
 

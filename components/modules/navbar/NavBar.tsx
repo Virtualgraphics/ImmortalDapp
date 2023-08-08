@@ -6,7 +6,7 @@ import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
 import Link from 'next/link'
 
 const navigation = [
-  { name: 'HOMEWORLD', href:'/', current: true },
+  { name: 'COVEN', href:'/', current: true },
   { name: 'STORY', href: 'story', current: false },
   { name: 'GAMES', href: 'games', current: false },
   { name: 'WEBTOON', href: 'webtoon', current: false },
@@ -20,7 +20,7 @@ function classNames(...classes: string[]) {
 
 export default function Example() {
   return (
-    <Disclosure as="nav" className="bg-black fixed top-0 z-30 w-full border-b-2 border-b-yellow-300">
+    <Disclosure as="nav" className="bg-black fixed top-0 z-30 w-full border-b-2 border-b-red-300/30">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -54,7 +54,7 @@ export default function Example() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-red-500/30 text-yellow-200' : 'text-white hover:bg-red-500/30 hover:text-yellow-200',
+                          item.current ? 'bg-red-500/30 text-yellow-200' : 'text-red-500 hover:bg-red-500/30 hover:text-yellow-200',
                           'px-3 py-2 rounded-md text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
