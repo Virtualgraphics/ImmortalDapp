@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const Intro = () => {
     return (
-      <div className="px-4 py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div className="px-4 py-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-10">
         <div className="max-w-xl mb-6 sm:mx-auto sm:text-center md:mb-10 lg:max-w-2xl">
           <p className="text-yellow-100 mb-1 text-2xl  tracking-wide uppercase md:mb-2 font-Metamorphous">
          Immortal RPG Game and NFT Collection
