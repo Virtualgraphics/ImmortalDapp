@@ -8,7 +8,7 @@ import Image from 'next/image'
 import React from 'react';
 
 
-const Token = () => {
+const NFTMint = () => {
   const { contract: tokenDropContract} = useContract("0xd23342d614a1ff1d7bc84b9041C8615532D55C6D");
   const [amountToClaim, setAmountToClaim] = useState("");
 
@@ -134,4 +134,4 @@ const Token = () => {
     };
 
  
-  export default Token;
+  export default NFTMint;
