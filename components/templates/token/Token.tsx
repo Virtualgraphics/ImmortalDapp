@@ -45,7 +45,7 @@ const Token = () => {
 <Image
               className="p-10 rounded-full shadow-3xl"
               src="/assets/immortal_token_gradient.jpg"
-              alt="Lotus"
+              alt="IMRTL"
               width={1260}
               height={750}
             />
@@ -53,24 +53,34 @@ const Token = () => {
           <h1 className="text-yellow-100  text-2xl font-Metamorphous ">Immortal Token</h1>
           <h2 className="text-white text-md py-2 font-Jost">Claim $IMRTL Tokens</h2>
 
-<div className="mt-5 mb-5 max-w-sm justify-center">
-          <input 
-    id="1"
-    type="text"  
-    placeholder="Enter amount to claim" 
-className="flex-grow  h-10 px-2 mb-3 text-black text-base transitiom duration-200 border-2 border-transparent rounded appearance-none md:mr-2 md:mb-0 bg-deep-purple-900 focus:border-teal-accent-700 focus:outline-none focus:shadow-outline"
-            
-   
-    onChange={(e) => setAmountToClaim(e.target.value)}
-    
-    />
-    </div>
-<div className="justify-center pb-8">
-<button className="bg-red-950 hover:bg-black text-white w-40 h-12 font-bold  px-4 rounded mt-1 m-auto">
-            Coming soon</button>
-          </div>
-              </div>
+          <div className="mt-5 mb-7 max-w-sm justify-items-center">
 
+<input 
+id="1"
+type="text"  
+placeholder="Enter amount to claim" 
+className="flex-grow  h-10 px-2 mb-3 text-black text-base transitiom duration-200 border-2 border-transparent rounded appearance-none md:mr-2 md:mb-0 bg-deep-purple-900 focus:border-teal-accent-700 focus:outline-none focus:shadow-outline"
+  
+
+onChange={(e) => setAmountToClaim(e.target.value)}
+
+/>
+</div>
+
+
+<div className='w-60 flex items-center justify-center m-auto'>
+<Web3Button 
+
+
+contractAddress="0x64D60B48B5E9Ae1D0889b6c397A73C0d3c540c1A"
+action={(contract) => contract.erc20.claim(amountToClaim)}
+onSuccess={() => alert("Claimed!")}
+onError={(err) => alert(err)}
+>
+Claim IMRTL
+
+</Web3Button></div>
+</div>
 
 <div className="bg-red-900/30 rounded-2xl w-72 drop-shadow-lg ">
 
@@ -78,7 +88,7 @@ className="flex-grow  h-10 px-2 mb-3 text-black text-base transitiom duration-20
 <Image
               className="p-10 rounded-full"
               src="/assets/blood_token_gradient.jpg"
-              alt="Stardust"
+              alt="Blood"
               width={1260}
               height={750}
             />
@@ -102,16 +112,16 @@ className="flex-grow  h-10 px-2 mb-3 text-black text-base transitiom duration-20
     </div>
    
    
-    <div className='w-60 flex items-center justify-center m-auto'>
+    <div className='w-60 flex items-center justify-center m-auto pb-8'>
     <Web3Button 
         
          
-          contractAddress="0x94B0E73c4328A53ccc2CdeDbEeB2aF625984Af90"
+          contractAddress="0x9798CDb5685622624165E7DF4E7613A46c4Cf1a0"
           action={(contract) => contract.erc20.claim(amountToClaim)}
           onSuccess={() => alert("Claimed!")}
           onError={(err) => alert(err)}
         >
-          Claim STARDUST
+          Claim BLOOD
         
           </Web3Button></div>
          </div>
