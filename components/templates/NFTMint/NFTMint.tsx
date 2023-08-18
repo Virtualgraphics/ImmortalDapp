@@ -140,7 +140,7 @@ const { contract } = useContract(MONSTERS_ADDRESS);
         </div>
 
             {!nfts ? (
-                <div className="flex justify-items-center content-center">
+                <div className="flex justify-center mx-auto p-24">
                     <Spinner />
                 </div>
             ) : (

@@ -6,7 +6,7 @@ import type { NextPage } from 'next';
 const GAMES: NextPage = () => {
   return (
 
-    <Default pageName="GAMES">
+    <Default pageName="Games">
     <Games />
   </Default>
   

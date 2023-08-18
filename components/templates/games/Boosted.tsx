@@ -22,20 +22,20 @@ export const Boosted = (props: EquippedProps) => {
     );
 
     return (
-        <div box-content p-2>
+        <div  p-2>
             {nft && (
-                <div className="p-5">
-                    <div className='flex'>
+                <div className="p-5 mx-auto justify-center">
+                    <div className='flex mx-auto justify-center'>
                         <div className="box-content">
                             <MediaRenderer
                                 src={nft.metadata.image}
-                                height="80%"
-                                width="80%"
+                                height="100%"
+                                width="100%"
                             />
                         </div>
                         <div className="flex">
                             <p className='text-2xl text-bold text-white'>{nft.metadata.name}</p>
-                            <p className=" text-lg text-white">Boosted: {ethers.utils.formatUnits(claimableRewards[0], 0)}</p>
+                            <p className=" text-base text-white">Boosted: {ethers.utils.formatUnits(claimableRewards[0], 0)}</p>
                             <Web3Button
                                 contractAddress={STAKING_ADDRESS}
                                 action={(contract) => contract.call("withdraw", [props.tokenId, 1])}

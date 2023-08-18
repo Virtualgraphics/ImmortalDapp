@@ -48,14 +48,14 @@ export function Inventory({ nft }: Props) {
     return (
         <div className='grid gap-4 grid-cols-3' >
             {nft?.map((nft) => (
-                <div className='p-5' key={nft.metadata.id} >
-                    <div className='items-center'>
+                <div className='py-4 m-auto justify-center' key={nft.metadata.id} >
+                    <div className='py-4'>
                     <MediaRenderer 
                         src={nft.metadata.image} 
-                        height="100px"
-                        width="100px"
+                        height="100%"
+                        width="100%"
                     />
-                    <p className='text-white text-xl'>{nft.metadata.name}</p>
+                    <p className='text-white text-xl py-4'>{nft.metadata.name}</p>
                     <Web3Button
                         contractAddress={STAKING_ADDRESS}
                         action={() => stakeNFT(nft.metadata.id)}

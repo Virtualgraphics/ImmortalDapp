@@ -91,13 +91,13 @@ const BloodHunt = () => {
           </div>
 
 
-          <div className="grid grid-cols-2 gap-4">
-            <div className="p-5 border-2">
+          <div className="grid grid-cols-2 gap-14">
+            <div className="p-10  bg-red-950 border-2 border-yellow-100 rounded-3xl">
               <h1 className="text-2xl text-yellow-100 font-Metamorphous">Vampire</h1>
               <div className='grid grid-cols-2 gap-4'>
                 <div className='content-box'>
                   {ownedVampires?.map((nft) => (
-                    <div key={nft.metadata.id}>
+                    <div className="py-8" key={nft.metadata.id}>
                       <MediaRenderer 
                         src={nft.metadata.image} 
                         height="100%"
@@ -107,19 +107,19 @@ const BloodHunt = () => {
                   ))}
                 </div>
                 <div className='content-box'>
-                  <p className="text-sm text-bold text-white">$BLOOD Balance:</p>
+                  <p className="text-base text-bold text-white pt-8 font-Jost">$BLOOD Balance:</p>
                     {rewardBalance && (
                         <p>{ethers.utils.formatUnits(rewardBalance, 18)}</p>
                       )}
                   </div>
               </div>
             </div>
-            <div className="p-5 border-2">
+            <div className="p-10 bg-red-950 border-2 border-yellow-100 rounded-3xl">
               <h1 className="text-2xl text-yellow-100 font-Metamorphous">Inventory</h1>
 
 
  
-              isLoaded={!loadingOwnedMonsters} 
+           
                 <Inventory
                   nft={ownedMonsters}
                 />     
@@ -128,7 +128,7 @@ const BloodHunt = () => {
 
             </div>
           </div>
-          <div className='p-5 my-4'>
+          <div className='p-10  bg-red-950 border-2 border-yellow-100 rounded-3xl my-14'>
             <h1 className="mb-8 text-yellow-100 text-2xl font-Metamorphous">Boosted Monsters</h1>
             <div className='grid grid-cols-3 gap-4'>
                 {boostedMonsters &&

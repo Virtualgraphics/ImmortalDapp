@@ -6,7 +6,7 @@ const STORY: NextPage = () => {
   return (
 
 
-    <Default pageName="Token">
+    <Default pageName="Story">
 
     <Story />
 

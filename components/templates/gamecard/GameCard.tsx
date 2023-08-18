@@ -19,7 +19,7 @@ const GameCard = () => {
             </div>
             <div className="px-6 py-8 border border-t-0 rounded-b sm:px-8">
               <h5 className="text-yellow-100 mb-2 text-xl font-bold leading-none sm:text-2xl">
-              BLOOD DEFI GAME
+              BLOODHUNT DEFI GAME
               </h5>
               <p className="mb-5 text-gray-300">
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -28,8 +28,11 @@ const GameCard = () => {
               </p>
 
              
-<button className="bg-red-950 hover:bg-black text-white w-40 h-12 font-bold px-4 rounded mt-1">
-            Play now</button>
+              <div className=" flex items-center justify-center py-4">
+            <Link href="/bloodhunt">
+            <button className="bg-red-950 hover:bg-black text-yellow-100  w-40 h-12 px-4 rounded  text-xl text-Jost">
+ Play now
+</button></Link></div>
             
 
             </div>
@@ -47,7 +50,7 @@ const GameCard = () => {
             </div>
             <div className="px-6 py-8 border border-t-0 rounded-b-lg sm:px-8">
               <h5 className="text-yellow-100 mb-2 text-xl font-bold leading-none sm:text-2xl">
-              IMMORTAL COIL RPG
+              MEMENTO MORI RPG
               </h5>
               <p className="mb-5 text-gray-300">
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -55,8 +58,11 @@ const GameCard = () => {
                 perspiciatis unde.
               </p>
              
-<button className="bg-red-950 hover:bg-black text-white w-40 h-12 font-bold  px-4 rounded mt-1">
-            Coming soon</button>
+              <div className=" flex items-center justify-center py-4">
+            <Link href="/bloodhunt">
+            <button className="bg-red-950 hover:bg-black text-yellow-100  w-40 h-12 px-4 rounded  text-xl text-Jost">
+ Play now
+</button></Link></div>
             
             </div>
           </div>
