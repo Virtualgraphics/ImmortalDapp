@@ -1,89 +1,122 @@
 import type { NextPage } from "next";
 
-
 import {
-  MediaRenderer, 
-  useContractMetadata, 
+  MediaRenderer,
+  useActiveClaimConditionForWallet,
+  useAddress,
+  useClaimConditions,
+  useClaimedNFTSupply,
+  useClaimerProofs,
+  useClaimIneligibilityReasons,
+  useContract,
+  useContractMetadata,
+  useUnclaimedNFTSupply,
   Web3Button,
-  useActiveClaimConditionForWallet, 
-  useAddress, 
-  useClaimIneligibilityReasons, 
-  useContract, 
-  useTotalCirculatingSupply, 
-  useTotalCount,
+  useNFTs,
 } from "@thirdweb-dev/react";
-
-import { CONTRACT_ADDRESS } from "../../../const/addresses";
-
+import { MONSTERS_ADDRESS } from "../../../const/addresses";
+import { NFT } from "@thirdweb-dev/sdk";
+import { BigNumber, utils } from "ethers";
 import { useState } from "react";
 import { FC, useEffect } from 'react';
 import { ethers } from "ethers";
 import Image from 'next/image';
 import { useRouter } from "next/router";
 import React from 'react';
-
+import MonsterNFT from "../games/MonsterNFT";
+import Spinner from "../../layouts/Spinner";
+import Link from "next/link";
+const myNftDropContractAddress = "0x32E33F2f65eA383CFB6A92d3920e4C656A0159D4";
 
 const NFTMint = () => {
 
-  const address = useAddress();
-  const router = useRouter();
-  const maxClaimQuantity = 3;
+const { contract: nftDrop } = useContract(myNftDropContractAddress);
+const address = useAddress();
+const [quantity, setQuantity] = useState(1);
+const { data: contractMetadata } = useContractMetadata(nftDrop);
+const claimConditions = useClaimConditions(nftDrop);
 
-  const {
-    contract
-  } = useContract(CONTRACT_ADDRESS);
-
-  const {
-    data: contractMetadata,
-    isLoading: isContractMetadataLoading,
-  } = useContractMetadata(contract);
-
-  const {
-    data: activeClaimPhase,
-    isLoading: isActiveClaimPhaseLoading,
-  } = useActiveClaimConditionForWallet(contract, address);
-
-  
-  const {
-    data: claimIneligibilityReasons,
-    isLoading: isClaimIneligibilityReasonsLoading,
-  } = useClaimIneligibilityReasons(
-    contract,
-    {
-      walletAddress: address || "",
-      quantity: 1,
-    }
-  );
-
-
-  const {
-    data: totalSupply,
-    isLoading: isTotalSupplyLoading,
-  } = useTotalCount(contract);
-  const {
-    data: totalClaimSupply,
-    isLoading: isTotalClaimSupplyLoading,
-  } = useTotalCirculatingSupply(contract);
-
-  
-
-  const [claimQuantity, setClaimQuantity] = useState(1);
-  const increment = () => {
-    if (claimQuantity < maxClaimQuantity) {
-      setClaimQuantity(claimQuantity + 1);
-    }
-  };
-  const decrement = () => {
-    if (claimQuantity > 1) {
-      setClaimQuantity(claimQuantity - 1);
-    }
-  };
-
+const { contract } = useContract(MONSTERS_ADDRESS);
+    const { data: nfts } = useNFTs(contract);
+    console.log(nfts);
 
   return (
 
 
     <div className="justify-center mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-lg md:px-24 lg:px-8 lg:pt-20">
+    <div className=" grid max-w-screen-lg row-gap-5 sm:text-center sm:mx-auto">
+      
+
+        <div className="m-auto w-96 py-2 ">
+        <Image
+        className=""
+        src="/assets/bat_divider.svg"
+        alt="Bat Divider"
+        width={1260}
+        height={750}
+      />
+        </div>
+
+        <h2 className="m-auto mb-4 text-3xl tracking-wide text-yellow-100 sm:text-4xl sm:leading-none sm:m-auto font-Metamorphous py-5">
+        IMMORTAL FOUNDERS EDITION
+        </h2>
+        <hr className="w-4/6 mx-auto  border-yellow-200" />
+        <p className="text-base text-white lg:text-lg  md:text-lg sm:px-4 py-4 font-Jost">
+       Claim your NFTs below and to play the Immortal Coil Games and read the Webtoons. 
+        </p>
+
+<div className="flex justify-center ">
+
+
+
+
+<div className="bg-red-900/30 rounded-3xl w-96 drop-shadow-3xl ">
+
+
+<Image
+          className="pt-10 pb-6 px-10  " 
+          src="/assets/immortal_collection_image.jpg"
+          alt="Immortal Founder Edition"
+          width={1500}
+          height={1500}
+        />
+
+<h1 className="text-yellow-100  text-lg font-Jost">Cost: 250 BLOOD</h1>
+<h1 className="text-white  text-sm font-Jost">You can claim max. 3 NFTs per wallet</h1>
+
+
+
+<div className="mt-5 mb-7 max-w-sm justify-items-center">
+
+      
+</div>
+
+
+<div className='w-60 flex items-center justify-center m-auto pb-12'>
+
+<Web3Button 
+          contractAddress={nftDrop?.getAddress() || ""}
+          action={(cntr) => cntr.erc721.claim(quantity)}
+       
+          onError={(err) => {
+            console.error(err);
+            alert("Error claiming NFTs");
+          }}
+          onSuccess={() => {
+            setQuantity(1);
+            alert("Successfully claimed NFTs");
+          }}
+        >
+        
+          Claim NFT
+        </Web3Button></div>
+     </div>
+          </div>
+</div>
+
+
+
+<div className="justify-center mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-lg md:px-24 lg:px-8 lg:pt-10">
     <div className=" grid max-w-screen-lg row-gap-5 sm:text-center sm:mx-auto">
       
 
@@ -97,59 +130,32 @@ const NFTMint = () => {
       />
         </div>
 
-        <h2 className="m-auto mb-4 text-3xl tracking-wide text-yellow-100 sm:text-4xl sm:leading-none sm:m-auto font-Metamorphous py-5">
-        IMMORTAL NFT COLLECTION
-        </h2>
+        
         <hr className="w-4/6 mx-auto  border-yellow-200" />
-        <p className="text-base text-white lg:text-lg  md:text-lg sm:px-4 py-8 font-Jost">
-       Claim your NFTs below and play the Immortal Coil Games and read the Webtoons. 
+
+        <p className="text-base text-white lg:text-lg md:text-lg sm:px-4 pt-6 font-Jost">
+       Purchase MONSTER HUNT NFTs with $BLOOD to boost your Vampires power and gain more $BLOOD. 
         </p>
+        </div>
+        </div>
 
-<div className="flex justify-center ">
-
-
-
-
-<div className="bg-red-900/30 rounded-2xl w-96 drop-shadow-lg ">
-
-
-<Image
-          className="p-10 rounded-2xl shadow-3xl"
-          src="/assets/nft_test.jpg"
-          alt="Stardust"
-          width={750}
-          height={750}
-        />
-
-<h1 className="text-yellow-100  text-xl font-Metamorphous">Memento Mori Collection</h1>
-
+            {!nfts ? (
+                <div className="flex justify-items-center content-center">
+                    <Spinner />
+                </div>
+            ) : (
+                <div className="grid grid-cols-3 gap-4 ">
+                    {nfts?.map((nftItem) => (
+                        <MonsterNFT 
+                            key={nftItem.metadata.id}
+                            nft={nftItem}
+                        />
+                    ))}
+                </div>
+            )}
 
 
-<div className="mt-5 mb-7 max-w-sm justify-items-center">
-
-      
-</div>
-
-
-<div className='w-60 flex items-center justify-center m-auto pb-12'>
-
-<Web3Button 
-    
-    contractAddress={CONTRACT_ADDRESS}
-    action={(contract) =>  contract.erc721.claim(claimQuantity)}
-    onSuccess={() => router.push(`/profile/${address}`)}
-   >
-      Claim NFT
-    
-      </Web3Button></div>
-     </div>
-          </div>
-</div>
-
-
-
-
-<div className="pb-12  justify-items-center">
+<div className="pt-28 pb-8 justify-items-center">
 
 <div className=" pt-14 m-auto  justify-center">
 <h1 className=" text-yellow-100 text-2xl text-center  font-Jost">
@@ -189,7 +195,11 @@ const NFTMint = () => {
 
 <h1 className="text-lg text-center text-white font-Jost py-2">NFT contract address on Bscscan:</h1>
         <p className="text-sm text-center text-white font-Jost px-2">
-          IMRTL: 0x94B0E73c4328A53ccc2CdeDbEeB2aF625984Af90
+          Immortal Coil Founders Edition: 0x32E33F2f65eA383CFB6A92d3920e4C656A0159D4
+        </p>
+
+        <p className="text-sm text-center text-white font-Jost py-2">
+          Blood Hunt Monster Edition: 0x7623dCee1c3De24129CC15a8398F7d8731bDAc
         </p>
         </div> 
   </div>
