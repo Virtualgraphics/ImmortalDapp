@@ -74,7 +74,7 @@ const { contract } = useContract(MONSTERS_ADDRESS);
 
 
 <Image
-          className="pt-10 pb-6 px-10  " 
+          className="pt-10 pb-6 px-10 mask mask-hexagon " 
           src="/assets/immortal_collection_image.jpg"
           alt="Immortal Founder Edition"
           width={1500}
@@ -131,7 +131,7 @@ const { contract } = useContract(MONSTERS_ADDRESS);
         </div>
 
         
-        <hr className="w-4/6 mx-auto  border-yellow-200" />
+       
 
         <p className="text-base text-white lg:text-lg md:text-lg sm:px-4 pt-6 font-Jost">
        Purchase MONSTER HUNT NFTs with $BLOOD to boost your Vampires power and gain more $BLOOD. 
@@ -155,7 +155,7 @@ const { contract } = useContract(MONSTERS_ADDRESS);
             )}
 
 
-<div className="pt-28 pb-8 justify-items-center">
+<div className="pb-8 justify-items-center">
 
 <div className=" pt-14 m-auto  justify-center">
 <h1 className=" text-yellow-100 text-2xl text-center  font-Jost">

@@ -43,7 +43,7 @@ const Token = () => {
 <div className="bg-red-900/30  rounded-2xl w-72 drop-shadow-lg justify-center" >
 
 <Image
-              className="p-10 rounded-full shadow-3xl"
+              className="p-10 mask mask-hexagon shadow-3xl"
               src="/assets/immortal_token_gradient.jpg"
               alt="IMRTL"
               width={1260}
@@ -86,7 +86,7 @@ Claim IMRTL
 
 
 <Image
-              className="p-10 rounded-full"
+              className="p-10 mask mask-hexagon"
               src="/assets/blood_token_gradient.jpg"
               alt="Blood"
               width={1260}

@@ -23,15 +23,15 @@ function MonsterNFT({ nft }: Props) {
 
     return (
 
-        <div key={nft.metadata.id} className='mx-auto justify-items-center'>
-            
+        <div key={nft.metadata.id} className='mx-auto justify-items-center py-12'>
+            <div className="mask mask-hexagon ">
             <MediaRenderer 
                 src={nft.metadata.image}
                 height="100%"
                 width="100%"
         
-            />
-            <div className=" text-yellow-100 text-2xl text-bold  text-center -mt-10 ">{nft.metadata.name}</div>
+            /></div>
+            <div className=" text-yellow-100 text-2xl text-bold  text-center  pt-4 ">{nft.metadata.name}</div>
             {!isLoading && data ? (
                 <div className="text-white text-center py-2">Cost: {ethers.utils.formatEther(data?.price)}{" " + data?.currencyMetadata.symbol}</div>
             ) :(

@@ -94,7 +94,7 @@ const BloodHunt = () => {
           Immortal Coil - Bloodhunt
             </h2>
             <hr className="w-full  border-yellow-200" />
-            <p className="text-base text-white lg:text-xl md:text-lg sm:px-4 py-5 font-Jost">
+            <p className="text-base text-white pb-12 lg:text-xl md:text-lg sm:px-4 py-5 font-Jost">
             Use your NFT Alien Character in a top-down single player RPG directly in your browser and collect tokens while powering up your Stargate in the DeFi Game.
             </p>
            
