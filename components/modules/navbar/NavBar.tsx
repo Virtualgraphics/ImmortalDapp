@@ -12,7 +12,7 @@ const navigation = [
   { name: 'WEBTOON', href: 'webtoon', current: false },
   { name: 'NFTs', href: 'nftmint', current: false },
   { name: 'TOKENS', href: 'token', current: false },
-  { name: 'BLOODHUNT', href: 'bloodhunt', current: false },
+  { name: 'CRYPT', href: 'crypt', current: false },
 ]
 
 function classNames(...classes: string[]) {

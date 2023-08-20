@@ -28,6 +28,7 @@ const BloodHunt = () => {
     const { data: rewardBalance } = useContractRead(rewardContract, "balanceOf", [address]);
     
     if (!address) {
+
       return (
         <div className="container-lg py-24 ">
           <div className="flex-col h-full mx-auto my-auto justify-center">
@@ -61,6 +62,7 @@ const BloodHunt = () => {
     }
   
     if (ownedVampires?.length === 0) {
+      
       return (
         <div className="container-lg">
 
@@ -75,6 +77,7 @@ const BloodHunt = () => {
     }
   //Main Container with Vampire on the laft and BLOOD reward on the right
     return (
+      
       <div className="justify-center px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 ">
 
 <div className="max-w-screen-sm sm:text-center sm:mx-auto">
