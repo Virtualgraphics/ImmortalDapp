@@ -48,8 +48,8 @@ export function Inventory({ nft }: Props) {
     return (
         <div className='grid gap-4 grid-cols-3' >
             {nft?.map((nft) => (
-                <div className='py-4 m-auto justify-center' key={nft.metadata.id} >
-                    <div className='py-4'>
+                <div className='grid py-4 ' key={nft.metadata.id} >
+                    <div className='grid py-4'>
                     <MediaRenderer 
                         src={nft.metadata.image} 
                         height="100%"

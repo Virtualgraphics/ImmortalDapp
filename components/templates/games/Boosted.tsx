@@ -24,18 +24,18 @@ export const Boosted = (props: EquippedProps) => {
     return (
         <div  p-2>
             {nft && (
-                <div className="p-5 mx-auto justify-center">
-                    <div className='flex mx-auto justify-center'>
-                        <div className="box-content">
+                <div className="mx-auto justify-center">
+                    <div className=' mx-auto justify-center'>
+                        <div className=" w-48">
                             <MediaRenderer
                                 src={nft.metadata.image}
                                 height="100%"
                                 width="100%"
                             />
                         </div>
-                        <div className="flex">
-                            <p className='text-2xl text-bold text-white'>{nft.metadata.name}</p>
-                            <p className=" text-base text-white">Boosted: {ethers.utils.formatUnits(claimableRewards[0], 0)}</p>
+                        <div className="w-96">
+                            <p className='text-xl text-bold text-yellow-100 py-2'>{nft.metadata.name}</p>
+                            <p className=" text-base text-white py-2">Boosted: {ethers.utils.formatUnits(claimableRewards[0], 0)}</p>
                             <Web3Button
                                 contractAddress={STAKING_ADDRESS}
                                 action={(contract) => contract.call("withdraw", [props.tokenId, 1])}
@@ -43,8 +43,8 @@ export const Boosted = (props: EquippedProps) => {
                         </div>
                     </div>
                     <div className="mt-5">
-                        <p className="text-xl text-white">Claimable $BLOOD:</p>
-                        <p className="text-base text-white">{ethers.utils.formatUnits(claimableRewards[1], 18)}</p>
+                        <p className="text-lg text-yellow-100 py-2">Claimable $BLOOD:</p>
+                        <p className="text-base text-white py-2">{ethers.utils.formatUnits(claimableRewards[1], 18)}</p>
                         <Web3Button
                             contractAddress={STAKING_ADDRESS}
                             action={(contract) => contract.call("claimRewards", [props.tokenId])}

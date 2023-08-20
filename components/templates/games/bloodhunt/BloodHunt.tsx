@@ -29,10 +29,20 @@ const BloodHunt = () => {
     
     if (!address) {
       return (
-        <div className="container-lg py-20">
-          <div className="flex-col h-full mx-auto justify-center">
-            <h1 className='text-3xl text-white py-28 my-10 text-center'>Welcome to Bloodhunt, the game</h1>
-
+        <div className="container-lg py-24 ">
+          <div className="flex-col h-full mx-auto my-auto justify-center">
+            <h1 className='text-3xl text-yellow-100 pt-16 text-center font-Metamorphous'>WELCOME TO THE BLOODHUNT</h1>
+            <p className='text-xl text-white pt-4 text-center font-Jost'>To participate in the BLOODHUNT, connect your wallet and claim a Founders NFT.</p>
+            <div className="m-auto w-96 py-8">
+              <Image
+              className="m-auto py-12 mask mask-hexagon"
+              src="/assets/monster_collection.jpg"
+              alt="Monster Collection"
+              width={1500}
+              height={1500}
+            />
+              </div>
+        
             <div className='w-60 flex items-center justify-center m-auto pb-12'>
             <ConnectWallet /></div>
           </div>
@@ -97,17 +107,19 @@ const BloodHunt = () => {
               <div className='grid grid-cols-2 gap-4'>
                 <div className='content-box'>
                   {ownedVampires?.map((nft) => (
-                    <div className="py-8" key={nft.metadata.id}>
+                    <div className="py-8 " key={nft.metadata.id}>
                       <MediaRenderer 
                         src={nft.metadata.image} 
                         height="100%"
                         width="100%"
-                      />
+                    
+                     
+                     />
                     </div>
                   ))}
                 </div>
-                <div className='content-box'>
-                  <p className="text-base text-bold text-white pt-8 font-Jost">$BLOOD Balance:</p>
+                <div className='content-box pl-4'>
+                  <p className="text-base text-bold text-white  pt-8 font-Jost">$BLOOD Balance:</p>
                     {rewardBalance && (
                         <p>{ethers.utils.formatUnits(rewardBalance, 18)}</p>
                       )}
@@ -115,7 +127,7 @@ const BloodHunt = () => {
               </div>
             </div>
             <div className="p-10 bg-red-950 border-2 border-yellow-100 rounded-3xl">
-              <h1 className="text-2xl text-yellow-100 font-Metamorphous">Inventory</h1>
+              <h1 className="text-2xl text-yellow-100 font-Metamorphous">Monster Inventory</h1>
 
 
  
@@ -139,7 +151,12 @@ const BloodHunt = () => {
                     />
                   ))}
             </div>
+
+            <p className="text-yellow-200 font-Jost pt-8 ">NOTE: Claim your $BLOOD before unboosting any monsters</p>
           </div>
+
+          
+
         </div>
       );
     };
