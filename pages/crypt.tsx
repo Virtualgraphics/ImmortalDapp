@@ -6,7 +6,7 @@ import type { NextPage } from 'next';
 const CRYPT: NextPage = () => {
   return (
 
-    <Default pageName="crypt">
+    <Default pageName="CRYPT">
     <Crypt />
   </Default>
   
