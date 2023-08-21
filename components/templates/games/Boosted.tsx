@@ -37,6 +37,9 @@ export const Boosted = (props: EquippedProps) => {
                             <p className='text-xl text-bold text-yellow-100 py-2'>{nft.metadata.name}</p>
                             <p className=" text-base text-white py-2">Boosted: {ethers.utils.formatUnits(claimableRewards[0], 0)}</p>
                             <Web3Button
+                           
+                
+                               
                                 contractAddress={STAKING_ADDRESS}
                                 action={(contract) => contract.call("withdraw", [props.tokenId, 1])}
                             >Unboost</Web3Button>
@@ -46,6 +49,7 @@ export const Boosted = (props: EquippedProps) => {
                         <p className="text-lg text-yellow-100 py-2">Claimable $BLOOD:</p>
                         <p className="text-base text-white py-2">{ethers.utils.formatUnits(claimableRewards[1], 18)}</p>
                         <Web3Button
+                           
                             contractAddress={STAKING_ADDRESS}
                             action={(contract) => contract.call("claimRewards", [props.tokenId])}
                         >Claim $BLOOD</Web3Button>

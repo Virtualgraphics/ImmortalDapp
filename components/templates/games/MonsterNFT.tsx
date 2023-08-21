@@ -40,6 +40,8 @@ function MonsterNFT({ nft }: Props) {
 
 <div className='py-4 flex items-center justify-center m-auto'>
             <Web3Button 
+            
+        
                 contractAddress={MONSTERS_ADDRESS}
                 action={(contract) => contract.erc1155.claim(nft.metadata.id, 1)}
             >Buy</Web3Button>

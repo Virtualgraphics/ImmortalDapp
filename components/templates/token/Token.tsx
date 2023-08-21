@@ -76,6 +76,7 @@ contractAddress="0x64D60B48B5E9Ae1D0889b6c397A73C0d3c540c1A"
 action={(contract) => contract.erc20.claim(amountToClaim)}
 onSuccess={() => alert("Claimed!")}
 onError={(err) => alert(err)}
+
 >
 Claim IMRTL
 
@@ -120,10 +121,11 @@ className="flex-grow  h-10 px-2 mb-3 text-black text-base transitiom duration-20
           action={(contract) => contract.erc20.claim(amountToClaim)}
           onSuccess={() => alert("Claimed!")}
           onError={(err) => alert(err)}
+         
         >
           Claim BLOOD
         
-          </Web3Button></div>
+          </Web3Button ></div>
          </div>
               </div>
 </div>

@@ -70,7 +70,9 @@ export default function Example() {
                 
                   <div>
                   
-                  <ConnectWallet />
+                  <ConnectWallet
+                
+                  />
 
                   </div>
                   

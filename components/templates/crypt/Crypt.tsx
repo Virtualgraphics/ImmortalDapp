@@ -1,7 +1,8 @@
-import { Web3Button,ThirdwebNftMedia, ConnectWallet, MediaRenderer, useAddress, useContract, useContractRead, useOwnedNFTs } from "@thirdweb-dev/react";
+import { Web3Button,ThirdwebNftMedia, useContractWrite,ConnectWallet, MediaRenderer, useAddress, useContract, useContractRead, useOwnedNFTs } from "@thirdweb-dev/react";
 import type { NextPage } from "next";
 import Link from 'next/link'
 import Image from 'next/image'
+import React, { useState, useEffect } from 'react';
 
 import { BigNumber, ethers } from "ethers";
 import CryptCard from "./CryptCard";
@@ -41,6 +42,24 @@ await stakingContractFounder?.call ("stake", [nftId])
 
 }
 
+const [claimableRewards, setClaimableRewards] = useState<BigNumber>();
+
+useEffect(() => {
+  if (!founderContract || !address) return;
+
+  async function loadClaimableRewards() {
+    const stakeInfo = await stakingContractFounder?.call("getStakeInfo", [address]);
+    setClaimableRewards(stakeInfo[1]);
+  }
+
+  loadClaimableRewards();
+}, [address, stakingContractFounder]);
+
+
+const { mutateAsync: claimRewards } = useContractWrite(
+  stakingContractFounder,
+  "claimRewards"
+);
 
 
 return (
@@ -68,9 +87,9 @@ return (
    
  
 
-     <div className="grid grid-cols-2  gap-14">
+     <div className="grid grid-cols-2 gap-14 h-full ">
 
-<div className="border-yellow-100 border-2 rounded-3xl ">
+<div className="border-yellow-100 border-2 rounded-3xl h-full bg-red-950/50 shadow-2xl">
 
   
 <div className="grid grid-cols-2 gap-8 p-8">
@@ -84,35 +103,34 @@ return (
        width={391}
        height={754}
      />
-
-
-
        </div>
 </div>
 
 
-<div className="bg-yellow-500 h-64 p-4">
-<h1 className="text-xl text-yellow-100">My Vampires</h1>
+<div className=" h-full ">
+
+<h1 className="text-2xl text-yellow-100 font-Metamorphous ">My Vampires</h1>
 <div>
   {myfounderNFTs?.map ((nft) => (
 
 <div>
 
-<h3> {nft.metadata.name} </h3>
+<p className="text-white text-Jost p-4"> {nft.metadata.name} </p>
 
 <ThirdwebNftMedia
 metadata={nft.metadata}
 height ="100%"
 width ="100%"
 
-/>
 
-<Web3Button
+/>
+<div className="p-4">
+<Web3Button 
 
 contractAddress={stakingAddressFounder}
 action={() => stakeNFT(nft.metadata.id)}
 
-> Bury in Crypt</Web3Button>
+> Bury in Crypt</Web3Button></div>
 
 </div>
 
@@ -120,23 +138,43 @@ action={() => stakeNFT(nft.metadata.id)}
 
 </div>
 
-<h1 className="text-white"> Vampire in Crypt</h1>
+<h1 className="text-white p-4 font-Jost"> Vampire in Crypt</h1>
 
 <div>
 
   {stakedNFT && stakedNFT [0].map((stakedNFt: BigNumber) => (
 
 <div key={stakedNFT.toString()}>
+
 <CryptCard tokenId={stakedNFT.toNumber ()}/>
 
 </div>
 
   ))}
 </div>
+<h1 className="text-white text-md font-Jost"> Claimable IMRTL</h1>
+<p>
+  {!claimableRewards
+    ? "Loading..."
+    : ethers.utils.formatUnits(claimableRewards, 18)}
+</p>
+
+<div className="p-4">
+<Web3Button
+
+  action={(stakingContractFounder) => stakingContractFounder.call("claimRewards")}
+  contractAddress={stakingAddressFounder}
+>
+  Claim Rewards
+</Web3Button></div>
 
 </div>
 </div>
 </div>
+
+
+
+
 
 
 <div className="border-yellow-100 border-2 rounded-3xl ">

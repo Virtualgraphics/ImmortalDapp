@@ -95,6 +95,8 @@ const { contract } = useContract(MONSTERS_ADDRESS);
 <div className='w-60 flex items-center justify-center m-auto pb-12'>
 
 <Web3Button 
+          
+          
           contractAddress={nftDrop?.getAddress() || ""}
           action={(cntr) => cntr.erc721.claim(quantity)}
        

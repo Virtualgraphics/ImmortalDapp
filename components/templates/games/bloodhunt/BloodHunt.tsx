@@ -64,11 +64,11 @@ const BloodHunt = () => {
     if (ownedVampires?.length === 0) {
       
       return (
-        <div className="container-lg">
+        <div className="container-lg ">
 
 <div className=" flex items-center justify-center py-4">
             <Link href="/nftmint">
-            <button className="bg-red-950 hover:bg-black text-yellow-200  w-40 h-12  px-4 rounded mt-1">
+            <button className="bg-red-950 hover:bg-black text-yellow-200  w-40 h-12  px-4 rounded mt-1 shadow-3xl">
   Get a Vampire Founders NFT
 </button></Link></div>
           
@@ -98,14 +98,14 @@ const BloodHunt = () => {
             </h2>
             <hr className="w-full  border-yellow-200" />
             <p className="text-base text-white pb-12 lg:text-xl md:text-lg sm:px-4 py-5 font-Jost">
-            Use your NFT Alien Character in a top-down single player RPG directly in your browser and collect tokens while powering up your Stargate in the DeFi Game.
+            Supercharge your Vampires powers by boosting him with a powerful monster. Each monster will earn you a different rate of $BLOOD tokens which you can use to buy more tokens or in the other games.
             </p>
            
           </div>
 
 
           <div className="grid grid-cols-2 gap-14">
-            <div className="p-10  bg-red-950 border-2 border-yellow-100 rounded-3xl">
+            <div className="p-10  bg-red-950 border-2 border-yellow-100 rounded-3xl shadow-3xl">
               <h1 className="text-2xl text-yellow-100 font-Metamorphous">Vampire</h1>
               <div className='grid grid-cols-2 gap-4'>
                 <div className='content-box'>
@@ -143,7 +143,7 @@ const BloodHunt = () => {
 
             </div>
           </div>
-          <div className='p-10  bg-red-950 border-2 border-yellow-100 rounded-3xl my-14'>
+          <div className='p-10  bg-red-950 border-2 border-yellow-100 rounded-3xl my-14 shadow-3xl'>
             <h1 className="mb-8 text-yellow-100 text-2xl font-Metamorphous">Boosted Monsters</h1>
             <div className='grid grid-cols-3 gap-4'>
                 {boostedMonsters &&

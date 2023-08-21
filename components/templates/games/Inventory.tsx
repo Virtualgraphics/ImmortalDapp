@@ -57,6 +57,7 @@ export function Inventory({ nft }: Props) {
                     />
                     <p className='text-white text-xl py-4'>{nft.metadata.name}</p>
                     <Web3Button
+                       
                         contractAddress={STAKING_ADDRESS}
                         action={() => stakeNFT(nft.metadata.id)}
                     >Boost</Web3Button>
