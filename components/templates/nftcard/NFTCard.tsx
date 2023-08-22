@@ -25,20 +25,21 @@ import {
     return (
       <>
         {nft && (
-          <div className="mt-4 w-11/12">
+          <div className="py-4 w-11/12 text-white justify-center mx-auto">
             {nft.metadata && (
               <ThirdwebNftMedia
                 metadata={nft.metadata}
-                className="w-full max-h-80 rounded-2xl"
+                className="w-full max-h-64"
               />
             )}
             <h3>{nft.metadata.name}</h3>
+            <div className="pt-4">
             <Web3Button
               action={(contract) => contract?.call("withdraw", [[nft.metadata.id]])}
               contractAddress={stakingContractAddress}
             >
               Withdraw
-            </Web3Button>
+            </Web3Button></div>
           </div>
         )}
       </>

@@ -90,7 +90,7 @@ const Stake: NextPage = () => {
      Dawn is slowly creeping up and your Vampire needs to hide in his coffin. Put your Vampire to sleep and earn valuable IMRTL tokens.</p>
    
 
-     <div className="grid grid-cols-2 gap-14 h-full ">
+     <div className="grid grid-cols-2 gap-14 h-full pt-8 ">
 
 <div className="border-yellow-100 border-2 rounded-3xl h-full bg-red-950/50 shadow-2xl">
 
@@ -114,17 +114,19 @@ const Stake: NextPage = () => {
 
     <div className=" h-full ">
     <h1 className="text-2xl text-yellow-100 font-Metamorphous ">My Vampires</h1>
-      <hr className="mt-4 w-1/2 border-yellow-100" />
+      
 
       {!address ? (
-        <ConnectWallet />
+        <div className="pt-8">
+        <ConnectWallet /></div>
       ) : (
         <>
           <h2>Your Tokens</h2>
-          <div className="w-full flex flex-row justify-items-center m-auto mt-6 flex-wrap">
-            <div className="w-1/3 h-32 border rounded-xl flex flex-col justify-items-center m-auto">
-              <h3 className="my-0 font-Jost font-bold text-yellow-100">Claimable Rewards</h3>
-              <p className="text-lg my-0 font-bold text-white">
+          <div className="grid grid-cols-2 gap-4">
+
+            <div className="w-full h-full p-4 border border-yellow-100 rounded-xl flex flex-col justify-items-center m-auto">
+              <h3 className="my-0 font-Jost  text-yellow-100">Claimable Rewards</h3>
+              <p className="text-base my-2 text-white font-Jost">
                 <b>
                   {!claimableRewards
                     ? "Loading..."
@@ -133,23 +135,42 @@ const Stake: NextPage = () => {
                 {tokenBalance?.symbol}
               </p>
             </div>
-            <div className="w-1/3 h-32 border rounded-xl flex flex-col justify-items-center m-auto">
-              <h3 className="my-0 font-Jost font-bold text-yellow-100">Current Balance</h3>
-              <p className="text-lg my-2 font-semibold font-Jost">
+
+
+            <div className="w-full h-full p-4 border border-yellow-100 rounded-xl flex flex-col justify-items-center m-auto">
+              <h3 className="my-0 font-Jost  text-yellow-100">Current Balance</h3>
+              <p className="text-base my-2  font-Jost">
                 <b>{tokenBalance?.displayValue}</b> {tokenBalance?.symbol}
               </p>
             </div>
           </div>
 
+
+          <div className="py-8">
           <Web3Button
             action={(contract) => contract.call("claimRewards")}
             contractAddress={stakingContractAddress}
           >
             Claim Rewards
           </Web3Button>
+          </div>
 
-          <hr className="mt-4 w-1/2 border-yellow-100" />
-          <h2>Your Staked NFTs</h2>
+          <div className="max-w-screen-sm sm:text-center sm:mx-auto">
+            
+    
+            <div className="m-auto py-2">
+            <Image
+            className="m-auto w-96 py-2"
+            src="/assets/bat_divider.svg"
+            alt="BAt Divider"
+            width={1260}
+            height={750}
+          /> </div>
+            </div>
+
+            
+
+          <h2 className="text-yellow-100 font-Jost text-2xl">Your staked NFTs</h2>
           <div className="max-w-3xl">
             {stakedTokens &&
               stakedTokens[0]?.map((stakedToken: BigNumber) => (
@@ -160,22 +181,25 @@ const Stake: NextPage = () => {
               ))}
           </div>
 
-          <hr className="mt-4 w-1/2 border-yellow-100" />
-          <h2>Your Unstaked NFTs</h2>
-          <div className="justify-center mt-4 w-1/2">
+          
+          <h2 className="text-yellow-100 font-Jost text-2xl">Your unstaked NFTs</h2>
+          <div className="justify-center w-full">
             {ownedNfts?.map((nft) => (
-              <div className="justify-center mt-4 w-1/2" key={nft.metadata.id.toString()}>
+              <div className="justify-center full" key={nft.metadata.id.toString()}>
                 <ThirdwebNftMedia
                   metadata={nft.metadata}
                   className="w-full max-h-80 rounded-2xl"
                 />
+                <div className="w-11/12 text-white justify-center mx-auto">
                 <h3>{nft.metadata.name}</h3>
+
+                <div className="pt-4">
                 <Web3Button
                   contractAddress={stakingContractAddress}
                   action={() => stakeNft(nft.metadata.id)}
                 >
                   Stake
-                </Web3Button>
+                </Web3Button></div> </div>
               </div>
             ))}
           </div>
