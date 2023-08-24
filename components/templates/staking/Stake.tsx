@@ -8,6 +8,7 @@ import {
 
   import React, { useEffect, useState } from "react";
   import { ethers } from "ethers";
+  import Spinner from "../../layouts/Spinner";
   
   export default function Stake() {
 
@@ -68,7 +69,7 @@ import {
               <h1 className="text-lg font-semibold text-white">
                 Stake Token:
               </h1>
-              <div role="status" className="max-w-sm animate-pulse">   isLoaded={!loadingStakeInfo && !loadingStakeTokenBalance} 
+              isLoaded={!loadingStakeInfo && !loadingStakeTokenBalance} 
                 {stakeInfo && stakeInfo[0] ? (
                   <p className="text-white font-base">
                     {ethers.utils.formatEther(stakeInfo[0])}
@@ -77,7 +78,7 @@ import {
                 ) : (
                   <h1 className="text-white">0</h1>
                 )}
-              </div>
+              
             </div>
 
             
@@ -146,17 +147,14 @@ import {
             </div>
          
             <div className="p-5 mt-8">
-            <div className="flex">
-              h={"100%"}
-              justifyContent={"space-between"}
-              direction={"column"}
-              textAlign={"center"}
+            <div className="flex flex-col h-full justify-center text-center">
+             
             
               <h1 className="text-white text-lg font-semibold">
                 Reward Token:
               </h1>
-              <div role="status" className="max-w-sm animate-pulse h-4 w-50">  
-                isLoaded={!loadingStakeInfo && !loadingRewardTokenBalance}
+               
+              isLoaded={!loadingStakeInfo && !loadingRewardTokenBalance}
             
                 {stakeInfo && stakeInfo[0] ? (
                   <div className="box-content">
@@ -168,7 +166,7 @@ import {
                 ) : (
                   <p className="text-white">0</p>
                 )}
-              </div>
+              
               <Web3Button
                 contractAddress={STAKE_CONTRACT_ADDRESSES}
                 action={async (contract) => {

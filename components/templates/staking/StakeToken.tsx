@@ -15,15 +15,15 @@ export default function StakeToken() {
           <div className="grid grid-rows-2 gap-4">
 
           <h1 className="text-white">Stake Token</h1>
-          <div role="status" className="max-w-sm animate-pulse h-4 w-50">  isLoaded={!loadingStakeToken && !loadingTokenBalance}</div>
+          isLoaded={!loadingStakeToken && !loadingTokenBalance}
                 </div>
 
 
                 <div>
-                <div role="status" className="max-w-sm animate-pulse h-4 w-50">  isLoaded={!loadingStakeToken && !loadingTokenBalance}
+                  isLoaded={!loadingStakeToken && !loadingTokenBalance}
                     <p className="text-white">{tokenBalance?.displayValue}</p>
                     
-                    </div>
+                   
             </div>
         </div>
     )

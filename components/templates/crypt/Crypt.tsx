@@ -13,9 +13,12 @@ import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 import Image from 'next/image'
 import { NFTCard } from "../nftcard";
+import StakeToken from "../staking/RewardToken";
+import RewardToken from "../staking/RewardToken";
+import Stake from "../staking/Stake";
 
 
-const Stake: NextPage = () => {
+const Crypt: NextPage = () => {
 
   const nftDropContractAddress = "0x32E33F2f65eA383CFB6A92d3920e4C656A0159D4";
   const stakingContractAddress = "0xc17EEC5b5b5Fb2672C8Da6FaC6d15e550Cfd858d";
@@ -112,7 +115,7 @@ const Stake: NextPage = () => {
 
 
 
-    <div className=" h-full ">
+     <div className="w-full ">
     <h1 className="text-2xl text-yellow-100 font-Metamorphous ">My Vampires</h1>
       
 
@@ -208,11 +211,55 @@ const Stake: NextPage = () => {
       </div>
       </div>
       </div>
+
+
+      <div className="border-yellow-100 border-2 rounded-3xl ">
+
+  
+<div className="grid grid-cols-2 gap-8 p-8">
+
+<div >
+<div className="m-auto ">
+       <Image
+       className="m-auto"
+       src="/assets/coffin03.png"
+       alt="Coffin 1"
+       width={391}
+       height={754}
+     />
+       </div>
+</div>
+
+  
+  <div className="w-full">
+  <div className="h-1/2 justify-center m-auto">
+    <h1 className="text-white">Please Connect a Wallet</h1>
+  </div>
+</div>
+
+<div className="w-full">
+      <div className="grid grid-cols-2 gap-4 mt-19">
+      <div> <StakeToken /></div> 
+      <div> <RewardToken /></div>
+      </div>
+      <Stake />
+    </div>
+
+
+
+</div>
+</div>
+
+
+
+
+
+
     </div>
     </div>
-   
    </div>
+   
   );
 };
 
-export default Stake;
+export default Crypt;
