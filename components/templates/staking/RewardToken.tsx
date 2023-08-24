@@ -12,15 +12,15 @@ export default function RewardToken() {
         <div className="p-5">
             <div className="grid grid-rows-2 gap-4">
                 
-                <h1 className="text-white">Reward Token</h1>
+                <h1 className="text-yellow-100 text-xl font-Jost">Reward Tokens</h1>
                isLoaded={!loadingStakeToken && !loadingTokenBalance}
               
                 <div>
-                    <h1 className="text-lg text-white font-bold">${tokenBalance?.symbol}</h1>
+                    <h1 className="text-md text-white font-Jost ">${tokenBalance?.symbol}</h1>
 
                  isLoaded={!loadingStakeToken && !loadingTokenBalance}
                  
-                    <p className="text-white">{tokenBalance?.displayValue}</p>
+                    <p className="text-white text-base font-Jost">{tokenBalance?.displayValue}</p>
                     </div>
                     
                     </div>

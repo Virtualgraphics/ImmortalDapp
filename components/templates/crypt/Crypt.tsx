@@ -231,23 +231,24 @@ const Crypt: NextPage = () => {
 </div>
 
   
-  <div className="w-full">
-  <div className="h-1/2 justify-center m-auto">
-    <h1 className="text-white">Please Connect a Wallet</h1>
-  </div>
-</div>
+  <div className="w-full bg-green-700">
 
-<div className="w-full">
-      <div className="grid grid-cols-2 gap-4 mt-19">
-      <div> <StakeToken /></div> 
+  
+    <h1 className="text-yellow-100 font-Metamorphous text-2xl">My Tokens</h1>
+  
+
+
+
+      <div className="m-auto ">
+
+      
       <div> <RewardToken /></div>
-      </div>
-      <Stake />
-    </div>
+     
+      <div><Stake /> </div>
+    </div></div></div>
 
 
 
-</div>
 </div>
 
 

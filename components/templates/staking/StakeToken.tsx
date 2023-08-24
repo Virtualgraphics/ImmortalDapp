@@ -14,7 +14,7 @@ export default function StakeToken() {
         <div className="p-5">
           <div className="grid grid-rows-2 gap-4">
 
-          <h1 className="text-white">Stake Token</h1>
+          <h1 className="text-yellow-100 text-xl font-Jost">Stake Token</h1>
           isLoaded={!loadingStakeToken && !loadingTokenBalance}
                 </div>
 

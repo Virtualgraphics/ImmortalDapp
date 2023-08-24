@@ -60,13 +60,13 @@ import {
   
   
     return (
-        <div className="p-5 mt-8">
-        <h1 className="text-white text-lg">Earn Reward Token</h1>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="w-full justify-center mx-auto">
+        <h1 className="text-yellow-100 text-xl py-4">Earn Reward Tokens</h1>
+        <div className="">
 
           
-            <div className="text-center mb-4">
-              <h1 className="text-lg font-semibold text-white">
+            <div className="w-full justify-center mx-auto text-center mb-4">
+              <h1 className=" text-yellow-100 text-xl">
                 Stake Token:
               </h1>
               isLoaded={!loadingStakeInfo && !loadingStakeTokenBalance} 
@@ -82,7 +82,7 @@ import {
             </div>
 
             
-            <div className="grid gid-cols-2 gap-4">
+            <div className="w-full justify-center mx-auto">
 
                 <div className="py-4">
              
@@ -92,6 +92,7 @@ import {
                   value={stakeAmount}
                   onChange={(e) => setStakeAmount(e.target.value)}
                 />
+                <div className="py-6">
                 <Web3Button
                   contractAddress={STAKE_CONTRACT_ADDRESSES}
                   action={async (contract) => {
@@ -115,10 +116,10 @@ import {
                   }
                 >
                   Stake
-                </Web3Button>
+                </Web3Button></div>
                 </div>
 
-              <div className="grid grid-rows-2 gap-4">
+              <div className="w-full justify-center m-auto">
 
 
                 <input
@@ -126,6 +127,7 @@ import {
                   value={unstakeAmount}
                   onChange={(e) => setUnstakeAmount(e.target.value)}
                 />
+                <div className="py-6">
                 <Web3Button
                   contractAddress={STAKE_CONTRACT_ADDRESSES}
                   action={async (contract) => {
@@ -142,15 +144,15 @@ import {
                   }
                 >
                   Unstake
-                </Web3Button>
+                </Web3Button></div>
               </div>
             </div>
          
-            <div className="p-5 mt-8">
+            <div className="p-4 mt-4">
             <div className="flex flex-col h-full justify-center text-center">
              
             
-              <h1 className="text-white text-lg font-semibold">
+              <h1 className="text-yellow-100 font-Jost text-xl ">
                 Reward Token:
               </h1>
                
@@ -158,31 +160,25 @@ import {
             
                 {stakeInfo && stakeInfo[0] ? (
                   <div className="box-content">
-                    <h1 className="text-white text-lg font-semibold">
+                    <h1 className="text-white text-base font-Jost">
                       {ethers.utils.formatEther(stakeInfo[1])}
                     </h1>
-                    <p className="text-white">{" $" + rewardTokenBalance?.symbol}</p>
+                    <p className="text-white font-Jost text-base">{" $" + rewardTokenBalance?.symbol}</p>
                   </div>
                 ) : (
-                  <p className="text-white">0</p>
+                  <p className="text-white font-Jost text-base">0</p>
                 )}
-              
+              <div className="py-6">
               <Web3Button
                 contractAddress={STAKE_CONTRACT_ADDRESSES}
                 action={async (contract) => {
                   await contract.call("claimRewards");
                   resetValue();
                 }}
-                onSuccess={() =>
-                    <div className="toast">
-                    <div className="alert alert-info">
-                      <span>Rewards claimed!</span>
-                   </div>
-                    </div>
-                }
+                
               >
                 Claim
-              </Web3Button>
+              </Web3Button></div>
             </div>
           </div>
         </div>
