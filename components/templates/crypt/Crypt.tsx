@@ -13,9 +13,7 @@ import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 import Image from 'next/image'
 import { NFTCard } from "../nftcard";
-import StakeToken from "../staking/RewardToken";
-import RewardToken from "../staking/RewardToken";
-import Stake from "../staking/Stake";
+
 
 
 const Crypt: NextPage = () => {
@@ -211,9 +209,7 @@ const Crypt: NextPage = () => {
       </div>
       </div>
       </div>
-
-
-      <div className="border-yellow-100 border-2 rounded-3xl ">
+      <div className="border-yellow-100 border-2 rounded-3xl h-full bg-red-950/50 shadow-2xl">
 
   
 <div className="grid grid-cols-2 gap-8 p-8">
@@ -229,28 +225,10 @@ const Crypt: NextPage = () => {
      />
        </div>
 </div>
-
-  
-  <div className="w-full bg-green-700">
-
-  
-    <h1 className="text-yellow-100 font-Metamorphous text-2xl">My Tokens</h1>
-  
-
-
-
-      <div className="m-auto ">
-
-      
-      <div> <RewardToken /></div>
-     
-      <div><Stake /> </div>
-    </div></div></div>
-
-
-
+</div>
 </div>
 
+      
 
 
 
