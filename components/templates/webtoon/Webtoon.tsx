@@ -68,7 +68,7 @@ const Webtoon = () => {
 
 <div className='m-auto justify-center pb-4'>
 <h1 className="text-yellow-100 text-center text-xl ">Answer the quiz question below correctly to claim your special Signature Vampire NFT.</h1>
-            <p className="text-center py-4">You only have one shot. If you choose the wrong answer, you won't get another try.</p>
+            <p className="text-center py-4">You only have one shot. If you choose the wrong answer, you will not get another try.</p>
             </div> 
 
 
