@@ -23,8 +23,8 @@ const MementoMori = () => {
       return (
         <div className="container-lg py-24 ">
           <div className="flex-col h-full mx-auto my-auto justify-center">
-            <h1 className='text-3xl text-yellow-100 pt-16 text-center font-Metamorphous'>WELCOME TO THE BLOODHUNT</h1>
-            <p className='text-xl text-white pt-4 text-center font-Jost'>To participate in the BLOODHUNT, connect your wallet and claim a Founders NFT.</p>
+            <h1 className='text-3xl text-yellow-100 pt-16 text-center font-Metamorphous'>WELCOME TO THE MEMENTO MORI RPG</h1>
+            <p className='text-xl text-white pt-4 text-center font-Jost'>To play the MEMEMTO MORI RPG, connect your wallet and claim a Founders NFT.</p>
             <div className="m-auto w-96 py-8">
               <Image
               className="m-auto py-12 mask mask-hexagon"
@@ -102,14 +102,20 @@ const MementoMori = () => {
             />
               </div>
         
-            <h2 className="m-auto mb-4 text-3xl font-bold tracking-wide text-yellow-100 sm:text-4xl sm:leading-none sm:m-auto font-Metamorphous py-3">
-          Immortal Coil - Memento Mori RPG
+            <h2 className="m-auto mb-4 text-lg  text-yellow-100 sm:text-4xl sm:leading-none sm:m-auto font-Metamorphous py-4 leading-loose">
+          Immortal Coil - Memento Mori
             </h2>
             <hr className="w-full  border-yellow-200" />
-            <p className="text-base text-white pb-12 lg:text-xl md:text-lg sm:px-4 py-5 font-Jost">
+            <p className="text-base text-white pb-12 lg:text-xl md:text-lg sm:px-4 py-4 font-Jost">
             Play as the immortal Vampire Kai in the world of Therondia and battle monsters, solve quests and save your immortal beloved Cirice from the clutches of the evil Necrocorvo in in the icey fortress Frosthaven.
             </p>
            
+          </div>
+
+          <div className="w-full  bg-white h-96 rounded-3xl">
+
+
+
           </div>
 
 
