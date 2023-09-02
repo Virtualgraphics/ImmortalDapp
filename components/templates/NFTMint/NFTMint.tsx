@@ -26,7 +26,7 @@ import React from 'react';
 import MonsterNFT from "../games/MonsterNFT";
 import Spinner from "../../layouts/Spinner";
 import Link from "next/link";
-const myNftDropContractAddress = "0x32E33F2f65eA383CFB6A92d3920e4C656A0159D4";
+const myNftDropContractAddress = "0xD671735b14ddb2DA84433bf291f00355de068992";
 
 const NFTMint = () => {
 

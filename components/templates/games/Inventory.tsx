@@ -35,11 +35,11 @@ export function Inventory({ nft }: Props) {
     if(nft?.length === 0) {
         return (
             <div className='w-max'>
-                <p className='text-white text-xl'>No tools.</p>
+                <p className='text-white text-lg'>You currently have no monsters in your inventory.</p>
                 <Link
                     href="/nftmint"
                 >
-                    <button className='rounded-2xl bg-black text-white p-4'>Shop Tool</button>
+                    <button className='rounded-2xl bg-black text-white mt-8 p-4'>Buy more monsters</button>
                 </Link>
             </div>
         )

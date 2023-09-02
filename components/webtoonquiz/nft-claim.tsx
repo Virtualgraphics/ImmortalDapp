@@ -35,13 +35,14 @@ function NftClaim() {
         }
     };
     return (
-        <div className="bg-red-500 text-center rounded-2xl p-4 mt-4 max-w-md">
-            <h1 className="text-white">Congratulations!</h1>
+        <div className="bg-red-900 text-center rounded-2xl p-8 m-8 max-w-md">
+            <h1 className="text-yellow-100 text-3xl pb-4">Congratulations!</h1>
             <p className="text-white">You have answered correctly.</p>
+            <div className="my-8">
             <Web3Button
                 contractAddress={PRIZE_NFT_CONTRACT_ADDRESS}
                 action={() => mintWithSignature()}
-            >Claim NFT Prize</Web3Button>
+            >Claim Episode 1 NFT</Web3Button></div>
         </div>
     );
 };

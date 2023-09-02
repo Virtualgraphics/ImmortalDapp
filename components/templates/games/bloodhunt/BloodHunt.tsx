@@ -64,15 +64,32 @@ const BloodHunt = () => {
     if (ownedVampires?.length === 0) {
       
       return (
-        <div className="container-lg ">
+<div className="w-full justify-center mx-auto pt-48">
+  <h1 className="text-yellow-100 text-2xl font-Jost text-center">To play the BLOODHUNT RPG you need to own a Founders Edition Vampire!</h1>
+  <p className="text-white text-md font-Jost text-center py-4">You currently do not own a Vampire. Head to the NFT page or click the button below to claim your Vampire and play the game.</p>
+<div className=" items-center justify-center m-auto py-4">
 
-<div className=" flex items-center justify-center py-4">
+<div className="justify-center m-auto w-96 py-8 h-full">
+              <Image
+              className="mask mask-hexagon"
+              src="/assets/monster_collection.jpg"
+              alt="Monster Collection"
+              width={1500}
+              height={1500}
+            />
+              
+
+              <div className="flex items-center justify-center p-8">
             <Link href="/nftmint">
-            <button className="bg-red-950 hover:bg-black text-yellow-200  w-40 h-12  px-4 rounded mt-1 shadow-3xl">
-  Get a Vampire Founders NFT
-</button></Link></div>
+           <button className="bg-red-950 hover:bg-black text-yellow-200  p-4 rounded-2xl">
+  Get a Vampire NFT
+</button>
+</Link>
+</div>
+</div>
+</div>
           
-        </div>
+</div>
       );
     }
   //Main Container with Vampire on the laft and BLOOD reward on the right

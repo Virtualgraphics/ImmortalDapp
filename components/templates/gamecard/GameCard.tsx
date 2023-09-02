@@ -59,7 +59,7 @@ const GameCard = () => {
               </p>
              
               <div className=" flex items-center justify-center py-4">
-            <Link href="/bloodhunt">
+            <Link href="/mementomori">
             <button className="bg-red-950 hover:bg-black text-yellow-100  w-40 h-12 px-4 rounded  text-xl text-Jost">
  Play now
 </button></Link></div>
