@@ -8,6 +8,7 @@ import {
 } from "../../../const/addresses";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Link from "next/link";
+import Spinner from '../../../components/layouts/Spinner';
 
 type Props = {
     nft: NFT;
@@ -29,24 +30,10 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
             tokenId: nft.metadata.id,
         });
 
-    //Add these for auction section
-    const [bidValue, setBidValue] = useState<string>();
-
-    const { data: auctionListing, isLoading: loadingAuction } =
-        useValidEnglishAuctions(marketplace, {
-            tokenContract: NFT_COLLECTION_ADDRESS,
-            tokenId: nft.metadata.id,
-        });
-
-    async function buyListing() {
-        let txResult;
-
-        //Add for auction section
-        if (auctionListing?.[0]) {
-            txResult = await marketplace?.englishAuctions.buyoutAuction(
-                auctionListing[0].id
-            );
-        } else if (directListing?.[0]){
+        async function buyListing() {
+            let txResult;
+   
+    if (directListing?.[0]){
             txResult = await marketplace?.directListings.buyFromListing(
                 directListing[0].id,
                 1
@@ -59,28 +46,6 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
     }
 
     
-    async function createBidOffer() {
-        let txResult;
-        if(!bidValue) {
-            return;
-        }
-
-        if (auctionListing?.[0]) {
-            txResult = await marketplace?.englishAuctions.makeBid(
-                auctionListing[0].id,
-                bidValue
-            );
-        } else if (directListing?.[0]){
-            txResult = await marketplace?.offers.makeOffer({
-                assetContractAddress: NFT_COLLECTION_ADDRESS,
-                tokenId: nft.metadata.id,
-                totalPrice: bidValue,
-            })
-        } else {
-            throw new Error("No listing found");
-        }
-        return txResult;
-    }
     
     return (
         <div className="w-full p-5 -my-5">
@@ -105,8 +70,8 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
                         {Object.entries(nft?.metadata?.attributes || {}).map(
                         ([key, value]) => (
                             <div key={key} className="flex flex-col items-center justify-items-center border rounded-2xl p-2">
-                                <p className="text-sm">{value.trait_type}</p>
-                                <p className="text-sm font-semibold">{value.value}</p> 
+                               
+                                
                                 </div>
                         )
                         )}
@@ -161,51 +126,22 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
                                     {directListing[0]?.currencyValuePerToken.displayValue}
                                     {" " + directListing[0]?.currencyValuePerToken.symbol}
                                 </p>
-                            ) : auctionListing && auctionListing[0] ? (
-                                <p className="text-2xl text-bold">
-                                    {auctionListing[0]?.buyoutCurrencyValue.displayValue}
-                                    {" " + auctionListing[0]?.buyoutCurrencyValue.symbol}
-                                </p>
+                            
                             ) : (
                                 <p className="text-2xl text-bold">Not for sale</p>
                             )}
                        
-                       isLoaded={!loadingAuction}
-                            {auctionListing && auctionListing[0] && (
-                                <div className="flex flex-col">
-                                   <p className="text-gray-700 ">Bids starting from</p>
-                                   <p className="text-2xl text-bold">
-                                    {auctionListing[0]?.minimumBidCurrencyValue.displayValue}
-                                    {" " + auctionListing[0]?.minimumBidCurrencyValue.symbol}
-                                </p>
-                                <p></p>
-                                </div>
-                            )}
+                       
                         
                     </div>
-                   isLoaded={!loadingMarketplace || !loadingDirectListing || !loadingAuction}
+                   isLoaded={!loadingMarketplace || !loadingDirectListing}
                    <div className=" flex flex-rows py-4">
                             <Web3Button
                                 contractAddress={MARKETPLACE_ADDRESS}
                                 action={async () => buyListing()}
-                                isDisabled={(!auctionListing || !auctionListing[0]) && (!directListing || !directListing[0])}
+                                isDisabled={(!directListing || !directListing[0])}
                             >Buy at asking price</Web3Button>
-                            <p className="text-center">or</p>
-                            <div className="flex flex-col">
-                                <input
-                                   className="mb-5"
-                                    defaultValue={
-                                        auctionListing?.[0]?.minimumBidCurrencyValue?.displayValue || 0
-                                    }
-                                    type={"number"}
-                                    onChange={(e) => setBidValue(e.target.value)}
-                                />
-                                <Web3Button
-                                    contractAddress={MARKETPLACE_ADDRESS}
-                                    action={async () => await createBidOffer()}
-                                    isDisabled={!auctionListing || !auctionListing[0]}
-                                >Place Bid</Web3Button>
-                            </div>
+                            
                         </div>
                         </div>
                 </div>
@@ -218,7 +154,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
 export const getStaticProps: GetStaticProps = async (context) => {
     const tokenId = context.params?.tokenId as string;
   
-    const sdk = new ThirdwebSDK("mumbai");
+    const sdk = new ThirdwebSDK("binance-testnet");
   
     const contract = await sdk.getContract(NFT_COLLECTION_ADDRESS);
   
@@ -240,7 +176,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
 
   export const getStaticPaths: GetStaticPaths = async () => {
-    const sdk = new ThirdwebSDK("mumbai");
+    const sdk = new ThirdwebSDK("binance-testnet");
   
     const contract = await sdk.getContract(NFT_COLLECTION_ADDRESS);
   

@@ -15,7 +15,7 @@ const MarketPlace = () => {
               <Image
               className="m-auto w-96 py-2"
               src="/assets/bat_divider.svg"
-              alt="BAt Divider"
+              alt="Bat Divider"
               width={1260}
               height={750}
             />

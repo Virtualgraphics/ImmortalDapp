@@ -17,9 +17,11 @@ export default function NFTGrid({
     data,
     overrideOnclickBehavior,
     emptyText = "No NFTs found",
+
 }: Props) {
+    
     return (
-        <div className="grid grid-cols-4 gap-4 w-full p-2 my-4">
+        <div className="grid grid-cols-4 gap-8 w-full p-8 my-4">
             {isLoading ? (
                 [...Array(20)].map((_, index) => (
                     <Spinner key={index}  />
