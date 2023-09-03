@@ -14,7 +14,7 @@ export default async function server(
 
         const sdk = ThirdwebSDK.fromPrivateKey(
             process.env.PRIVATE_KEY, 
-            "optimism-goerli"
+            "binance-testnet"
         );
 
         const prizeContract = await sdk.getContract(

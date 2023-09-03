@@ -122,11 +122,12 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
             <h2 className="mb-12 text-5xl  leading-tight tracking-wide font-Metamorphous">
               Are you ready <br /><span>for an adventure</span>
             </h2>
-            <button type="button"
+            <Link href="/nftmint">
+               <button type="button"
               className="rounded border-2 border-neutral-50 px-[46px] pt-[14px] pb-[12px] text-sm font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-100 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200"
               data-te-ripple-init data-te-ripple-color="light">
               Get started
-            </button>
+            </button></Link>
           </div>
         </div>
       </div>

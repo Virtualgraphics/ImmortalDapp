@@ -25,7 +25,7 @@ export const Boosted = (props: EquippedProps) => {
         <div  p-2>
             {nft && (
                 <div className="mx-auto justify-center">
-                    <div className=' mx-auto justify-center'>
+                    <div className=' mx-auto justify-center '>
                         <div className=" w-48">
                             <MediaRenderer
                                 src={nft.metadata.image}

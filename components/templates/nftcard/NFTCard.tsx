@@ -16,7 +16,7 @@ import {
   const NFTCard: FC<NFTCardProps> = ({ tokenId }) => {
 
     const nftDropContractAddress = "0xD671735b14ddb2DA84433bf291f00355de068992";
-    const stakingContractAddress = "0xc17EEC5b5b5Fb2672C8Da6FaC6d15e550Cfd858d";
+    const stakingContractAddress = "0xc5F2F431A16Dc7A98Fbea377AAecb54101b79CA8";
     const  tokenContractAddress = "0x64D60B48B5E9Ae1D0889b6c397A73C0d3c540c1A";
 
     const { contract } = useContract(nftDropContractAddress, "nft-drop");
@@ -25,20 +25,20 @@ import {
     return (
       <>
         {nft && (
-          <div className="py-4 w-11/12 text-white justify-center mx-auto">
+          <div className=" text-white font-semibold justify-center m-auto  ">
             {nft.metadata && (
               <ThirdwebNftMedia
                 metadata={nft.metadata}
-                className="w-full max-h-64"
+                className="w-full max-h-48 justify-center m-auto"
               />
             )}
-            <h3>{nft.metadata.name}</h3>
-            <div className="pt-4">
+            <h3 className="py-2">{nft.metadata.name}</h3>
+            <div className="pb-6">
             <Web3Button
               action={(contract) => contract?.call("withdraw", [[nft.metadata.id]])}
               contractAddress={stakingContractAddress}
             >
-              Withdraw
+              Unstake
             </Web3Button></div>
           </div>
         )}

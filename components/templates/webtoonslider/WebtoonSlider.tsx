@@ -5,111 +5,111 @@ import Image from 'next/image'
 
 const fadeImages = [
   {
-    url: 'https://www.virtual-graphics.ch/wp-content/uploads/2023/08/ep01_01.jpg',
+    url: 'https://gnfd-testnet-sp2.bnbchain.org/view/webtoon-ep01/ep01_01.jpg',
     caption: ''
   },
   {
-    url: 'https://www.virtual-graphics.ch/wp-content/uploads/2023/08/ep01_02.jpg',
+    url: 'https://gnfd-testnet-sp2.bnbchain.org/view/webtoon-ep01/ep01_02.jpg',
     caption: ''
   },
   {
-    url: 'https://www.virtual-graphics.ch/wp-content/uploads/2023/08/ep01_03.jpg',
-    caption: ''
-  },
-
-  {
-    url: 'https://www.virtual-graphics.ch/wp-content/uploads/2023/08/ep01_04.jpg',
+    url: 'https://gnfd-testnet-sp2.bnbchain.org/view/webtoon-ep01/ep01_03.jpg',
     caption: ''
   },
 
   {
-    url: 'https://www.virtual-graphics.ch/wp-content/uploads/2023/08/ep01_05.jpg',
+    url: 'https://gnfd-testnet-sp2.bnbchain.org/view/webtoon-ep01/ep01_04.jpg',
     caption: ''
   },
 
   {
-    url: 'https://www.virtual-graphics.ch/wp-content/uploads/2023/08/ep01_06.jpg',
+    url: 'https://gnfd-testnet-sp2.bnbchain.org/view/webtoon-ep01/ep01_05.jpg',
     caption: ''
   },
 
   {
-    url: 'https://www.virtual-graphics.ch/wp-content/uploads/2023/08/ep01_07.jpg',
+    url: 'https://gnfd-testnet-sp2.bnbchain.org/view/webtoon-ep01/ep01_06.jpg',
     caption: ''
   },
 
   {
-    url: 'https://www.virtual-graphics.ch/wp-content/uploads/2023/08/ep01_08.jpg',
-    caption: ''
-  },
-  {
-    url: 'https://www.virtual-graphics.ch/wp-content/uploads/2023/08/ep01_09.jpg',
-    caption: ''
-  },
-  {
-    url: 'https://www.virtual-graphics.ch/wp-content/uploads/2023/08/ep01_10.jpg',
-    caption: ''
-  },
-  {
-    url: 'https://www.virtual-graphics.ch/wp-content/uploads/2023/08/ep01_11.jpg',
+    url: 'https://gnfd-testnet-sp2.bnbchain.org/view/webtoon-ep01/ep01_07.jpg',
     caption: ''
   },
 
   {
-    url: 'https://www.virtual-graphics.ch/wp-content/uploads/2023/08/ep01_12.jpg',
+    url: 'https://gnfd-testnet-sp2.bnbchain.org/view/webtoon-ep01/ep01_08.jpg',
+    caption: ''
+  },
+  {
+    url: 'https://gnfd-testnet-sp2.bnbchain.org/view/webtoon-ep01/ep01_09.jpg',
+    caption: ''
+  },
+  {
+    url: 'https://gnfd-testnet-sp2.bnbchain.org/view/webtoon-ep01/ep01_10.jpg',
+    caption: ''
+  },
+  {
+    url: 'https://gnfd-testnet-sp2.bnbchain.org/view/webtoon-ep01/ep01_11.jpg',
     caption: ''
   },
 
   {
-    url: 'https://www.virtual-graphics.ch/wp-content/uploads/2023/08/ep01_13.jpg',
+    url: 'https://gnfd-testnet-sp2.bnbchain.org/view/webtoon-ep01/ep01_12.jpg',
     caption: ''
   },
 
   {
-    url: 'https://www.virtual-graphics.ch/wp-content/uploads/2023/08/ep01_14.jpg',
+    url: 'https://gnfd-testnet-sp2.bnbchain.org/view/webtoon-ep01/ep01_13.jpg',
     caption: ''
   },
 
   {
-    url: 'https://www.virtual-graphics.ch/wp-content/uploads/2023/08/ep01_15.jpg',
-    caption: ''
-  },
-  {
-    url: 'https://www.virtual-graphics.ch/wp-content/uploads/2023/08/ep01_16.jpg',
-    caption: ''
-  },
-  {
-    url: 'https://www.virtual-graphics.ch/wp-content/uploads/2023/08/ep01_17.jpg',
+    url: 'https://gnfd-testnet-sp2.bnbchain.org/view/webtoon-ep01/ep01_14.jpg',
     caption: ''
   },
 
   {
-    url: 'https://www.virtual-graphics.ch/wp-content/uploads/2023/08/ep01_18.jpg',
+    url: 'https://gnfd-testnet-sp2.bnbchain.org/view/webtoon-ep01/ep01_15.jpg',
+    caption: ''
+  },
+  {
+    url: 'https://gnfd-testnet-sp2.bnbchain.org/view/webtoon-ep01/ep01_16.jpg',
+    caption: ''
+  },
+  {
+    url: 'https://gnfd-testnet-sp2.bnbchain.org/view/webtoon-ep01/ep01_17.jpg',
     caption: ''
   },
 
   {
-    url: 'https://www.virtual-graphics.ch/wp-content/uploads/2023/08/ep01_19.jpg',
+    url: 'https://gnfd-testnet-sp2.bnbchain.org/view/webtoon-ep01/ep01_18.jpg',
+    caption: ''
+  },
+
+  {
+    url: 'https://gnfd-testnet-sp2.bnbchain.org/view/webtoon-ep01/ep01_19.jpg',
     caption: ''
   },
 
 
   {
-    url: 'https://www.virtual-graphics.ch/wp-content/uploads/2023/08/ep01_20.jpg',
+    url: 'https://gnfd-testnet-sp2.bnbchain.org/view/webtoon-ep01/ep01_20.jpg',
     caption: ''
   },
 
   {
-    url: 'https://www.virtual-graphics.ch/wp-content/uploads/2023/08/ep01_21.jpg',
+    url: 'https://gnfd-testnet-sp2.bnbchain.org/view/webtoon-ep01/ep01_21.jpg',
     caption: ''
   },
 
   {
-    url: 'https://www.virtual-graphics.ch/wp-content/uploads/2023/08/ep01_22.jpg',
+    url: 'https://gnfd-testnet-sp2.bnbchain.org/view/webtoon-ep01/ep01_22.jpg',
     caption: ''
   },
 
   {
-    url: 'https://www.virtual-graphics.ch/wp-content/uploads/2023/08/ep01_23.jpg',
+    url: 'https://gnfd-testnet-sp2.bnbchain.org/view/webtoon-ep01/ep01_23.jpg',
     caption: ''
   },
 

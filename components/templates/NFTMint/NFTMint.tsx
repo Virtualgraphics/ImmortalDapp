@@ -197,7 +197,8 @@ const { contract } = useContract(MONSTERS_ADDRESS);
 
 <h1 className="text-lg text-center text-white font-Jost py-2">NFT contract address on Bscscan:</h1>
         <p className="text-sm text-center text-white font-Jost px-2">
-          Immortal Coil Founders Edition: 0x32E33F2f65eA383CFB6A92d3920e4C656A0159D4
+          Immortal Coil Founders Edition: 0xD671735b14ddb2DA84433bf291f00355de068992
+
         </p>
 
         <p className="text-sm text-center text-white font-Jost py-2">

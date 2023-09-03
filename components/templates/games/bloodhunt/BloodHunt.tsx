@@ -54,14 +54,15 @@ const BloodHunt = () => {
     if (loadingOwnedVampires) {
       return(
         <div className="container-lg">
-          <div className="flex h-full justify-items-center items-center ">
-            <Spinner />
-          </div>
+          <div className="h-full mt-96 justify-center m-auto flex"><Spinner/></div>;
+  
         </div>
       );
     }
   
     if (ownedVampires?.length === 0) {
+
+
       
       return (
 <div className="w-full justify-center mx-auto pt-48">
@@ -123,7 +124,7 @@ const BloodHunt = () => {
 
           <div className="grid grid-cols-2 gap-14">
             <div className="p-10  bg-red-950 border-2 border-yellow-100 rounded-3xl shadow-3xl">
-              <h1 className="text-2xl text-yellow-100 font-Metamorphous">Vampire</h1>
+              <h1 className="text-2xl text-yellow-100 font-Metamorphous">Your Vampires</h1>
               <div className='grid grid-cols-2 gap-4'>
                 <div className='content-box'>
                   {ownedVampires?.map((nft) => (
@@ -139,7 +140,7 @@ const BloodHunt = () => {
                   ))}
                 </div>
                 <div className='content-box pl-4'>
-                  <p className="text-base text-bold text-white  pt-8 font-Jost">$BLOOD Balance:</p>
+                  <p className="text-base text-bold text-yellow-100  pt-8 font-Jost">$BLOOD Balance:</p>
                     {rewardBalance && (
                         <p>{ethers.utils.formatUnits(rewardBalance, 18)}</p>
                       )}

@@ -13,26 +13,33 @@ import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 import Image from 'next/image'
 import { NFTCard } from "../nftcard";
+import Spinner from "../../layouts/Spinner";
 
 
 
 const Crypt: NextPage = () => {
 
   const nftDropContractAddress = "0xD671735b14ddb2DA84433bf291f00355de068992";
-  const stakingContractAddress = "0xc17EEC5b5b5Fb2672C8Da6FaC6d15e550Cfd858d";
-  const  tokenContractAddress = "0x64D60B48B5E9Ae1D0889b6c397A73C0d3c540c1A";
+  const stakingContractAddress = "0xc5F2F431A16Dc7A98Fbea377AAecb54101b79CA8";
+  const tokenContractAddress = "0x64D60B48B5E9Ae1D0889b6c397A73C0d3c540c1A";
+ 
+
 
   const address = useAddress();
   const { contract: nftDropContract } = useContract(
     nftDropContractAddress,
     "nft-drop"
   );
+
+  
+
   const { contract: tokenContract } = useContract(
     tokenContractAddress,
     "token"
   );
   const { contract, isLoading } = useContract(stakingContractAddress);
   const { data: ownedNfts } = useOwnedNFTs(nftDropContract, address);
+ 
   const { data: tokenBalance } = useTokenBalance(tokenContract, address);
   const [claimableRewards, setClaimableRewards] = useState<BigNumber>();
   const { data: stakedTokens } = useContractRead(contract, "getStakeInfo", [
@@ -64,8 +71,10 @@ const Crypt: NextPage = () => {
   }
 
   if (isLoading) {
-    return <div>Loading</div>;
+    return <div className="h-screen mt-96 justify-center m-auto flex"><Spinner/></div>;
   }
+
+
 
   return (
 
@@ -73,7 +82,7 @@ const Crypt: NextPage = () => {
 <div className="max-w-screen-xl sm:text-center sm:mx-auto">
             
     
-       <div className="m-auto w-96 py-2">
+       <div className="m-auto w-96py-2">
        <Image
        className="m-auto w-96 py-2"
        src="/assets/bat_divider.svg"
@@ -91,9 +100,19 @@ const Crypt: NextPage = () => {
      Dawn is slowly creeping up and your Vampire needs to hide in his coffin. Put your Vampire to sleep and earn valuable IMRTL tokens.</p>
    
 
-     <div className="grid grid-cols-2 gap-14 h-full pt-8 ">
+    
+
+
+     <div className="w-3/4 pt-8 justify-center m-auto flex">
+
+
 
 <div className="border-yellow-100 border-2 rounded-3xl h-full bg-red-950/50 shadow-2xl">
+
+
+
+
+
 
   
 <div className="grid grid-cols-2 gap-8 p-8">
@@ -101,29 +120,35 @@ const Crypt: NextPage = () => {
 <div >
 <div className="m-auto ">
        <Image
-       className="m-auto "
+       className="m-auto w-64 "
        src="/assets/coffin.png"
        alt="Coffin 1"
        width={391}
        height={754}
-     />
-       </div>
-</div>
+     /> </div></div>
 
 
 
 
-     <div className="w-full ">
-    <h1 className="text-2xl text-yellow-100 font-Metamorphous ">My Vampires</h1>
+
+
+
+
+    <div className="w-full ">
+    
       
 
       {!address ? (
-        <div className="pt-8">
-        <ConnectWallet /></div>
+        <div className="pt-6 w-64">
+<h1 className="text-white font-Jost pb-8">Please connect a wallet and claim a Vampire Founders NFT to use the Crypt.</h1>
+
+
+        <ConnectWallet />
+        </div>
       ) : (
         <>
           <h2>Your Tokens</h2>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-row-2 gap-4">
 
             <div className="w-full h-full p-4 border border-yellow-100 rounded-xl flex flex-col justify-items-center m-auto">
               <h3 className="my-0 font-Jost  text-yellow-100">Claimable Rewards</h3>
@@ -141,7 +166,10 @@ const Crypt: NextPage = () => {
             <div className="w-full h-full p-4 border border-yellow-100 rounded-xl flex flex-col justify-items-center m-auto">
               <h3 className="my-0 font-Jost  text-yellow-100">Current Balance</h3>
               <p className="text-base my-2  font-Jost">
-                <b>{tokenBalance?.displayValue}</b> {tokenBalance?.symbol}
+                <b>{tokenBalance?.displayValue}
+                </b> {" "}
+                
+                {tokenBalance?.symbol}
               </p>
             </div>
           </div>
@@ -171,7 +199,7 @@ const Crypt: NextPage = () => {
 
             
 
-          <h2 className="text-yellow-100 font-Jost text-2xl">Your staked NFTs</h2>
+         
           <div className="max-w-3xl">
             {stakedTokens &&
               stakedTokens[0]?.map((stakedToken: BigNumber) => (
@@ -183,13 +211,13 @@ const Crypt: NextPage = () => {
           </div>
 
           
-          <h2 className="text-yellow-100 font-Jost text-2xl">Your unstaked NFTs</h2>
-          <div className="justify-center w-full">
+        
+          <div className="justify-center m-auto flex w-full">
             {ownedNfts?.map((nft) => (
-              <div className="justify-center full" key={nft.metadata.id.toString()}>
+              <div className="justify-center px-4" key={nft.metadata.id.toString()}>
                 <ThirdwebNftMedia
                   metadata={nft.metadata}
-                  className="w-full max-h-80 rounded-2xl"
+                  className="w-full max-h-48 rounded-2xl"
                 />
                 <div className="w-11/12 text-white justify-center mx-auto">
                 <h3>{nft.metadata.name}</h3>
@@ -209,24 +237,13 @@ const Crypt: NextPage = () => {
       </div>
       </div>
       </div>
-      <div className="border-yellow-100 border-2 rounded-3xl h-full bg-red-950/50 shadow-2xl">
+
+
+
+      
 
   
-<div className="grid grid-cols-2 gap-8 p-8">
 
-<div >
-<div className="m-auto ">
-       <Image
-       className="m-auto"
-       src="/assets/coffin03.png"
-       alt="Coffin 1"
-       width={391}
-       height={754}
-     />
-       </div>
-</div>
-</div>
-</div>
 
       
 
