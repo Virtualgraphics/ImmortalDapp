@@ -29,16 +29,7 @@ const Games = () => {
            
           </div>
 
-<div className='flex items-center justify-center'>
 
-<Image
-              className="flex items-center justify-center"
-              src="/assets/game_coverIMRTL.png"
-              alt="Immortal Coil Game"
-              width={1150}
-              height={726}
-            />
-            </div>
 <div className='flex items-center justify-center'>
 <h1 className='text-yellow-100 text-3xl font-bold mt-10 font-Jost'>
 The IMMORTAL COIL Games come in two variations:

@@ -9,6 +9,7 @@ import {
 import { GetStaticPaths, GetStaticProps } from "next";
 import Link from "next/link";
 import Spinner from '../../../components/layouts/Spinner';
+import MarketNav from '../../../components/NFTmarketplace/MarketNav';
 
 type Props = {
     nft: NFT;
@@ -48,69 +49,57 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
     
     
     return (
-        <div className="w-full p-5 -my-5">
-            <div className="grid grid-cols-2 gap-6">
-                <div className=" flex flex-rows py-6">
-                    <div className="rounded-2xl overflow-hidden">
+
+        <div>
+        <MarketNav/>
+        <div className="w-4/5 mt-8 justify-center m-auto flex bg-yellow-400 ">
+
+          
+
+            <div className="grid grid-cols-2 gap-4">
+
+
+                <div className="justify-center mx-auto bg-black w-full">
+
+
+                    <div className="rounded-2xl  justify-center m-auto ">
                        isLoaded={!loadingMarketplace && !loadingDirectListing}
                             <ThirdwebNftMedia
                                 metadata={nft.metadata}
-                                width="100%"
-                                height="100%"
-                            />
-                        
-                    </div>
-                    <div className="box-content">
-                    <p className="font-bold"> Description:</p>
-                    <p className="font-bold">{nft.metadata.description}</p>
-                    </div>
-                    <div className="box-content">
-                        <p className="text-white font-semibold font-Jost">Traits:</p>
-                        <div className="grid grid-cols-2 gap-4">
-                        {Object.entries(nft?.metadata?.attributes || {}).map(
-                        ([key, value]) => (
-                            <div key={key} className="flex flex-col items-center justify-items-center border rounded-2xl p-2">
-                               
-                                
-                                </div>
-                        )
-                        )}
-                        </div>
-                        </div>
-                    </div>
-                </div>
+                                width="80%"
+                                height="80%"
+                            /></div>
+                          </div>
+
+                          <div>
+
+                    
                 
-                <div className=" flex flex-rows py-6">
+
+
+                <div className=" w-96  bg-blue-500">
                     {contractMetadata && (
-                        <div className="flex items-center">
-                            <div className="box-content rounded-2xl overflow-hidden mr-4" >
-                                <MediaRenderer
-                                    src={contractMetadata.image}
-                                    height="32px"
-                                    width="32px"
-                                />
-                            </div>
-                            <p className="text-white font-semibold">{contractMetadata.name}</p>
+                        <div className="flex items-center bg-blue-600">
+                            
+                          
+                            <p className="text-white font-semibold font-Jost pb-2">{contractMetadata.name}</p>
                         </div>
                     )}
-                    <div className="box-content mx-2" >
-                        <p className="text-3xl font-bold">{nft.metadata.name}</p>
+                    <div className="box-content " >
+                        <p className="text-2xl font-bold font-Jost pb-2">{nft.metadata.name}</p>
                         <Link
                             href={`/profile/${nft.owner}`}
                         >
-                            <div className="flex flex-row items-center">
+                            <div className="flex flex-row items-center pb-4">
 
                             <Image
-              className="mr-4 w-6 h-6"
+              className="mr-4 w-6 h-6 rounded-full"
               src="/assets/avatar.jpg"
               alt="BAt Divider"
               width={48}
               height={48}
             />
             
-
-                               
-
 
 
                                 <p className="text-sm text-white" >{nft.owner.slice(0,6)}...{nft.owner.slice(-4)}</p>
@@ -119,10 +108,10 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
                     </div>
                     
                     <div className="flex flex-row bg-white p-4 rounded-2xl">
-                        <p className="text-gray-700 ">Price:</p>
+                        <p className="text-white ">Price:</p>
                         isLoaded={!loadingMarketplace && !loadingDirectListing}
                             {directListing && directListing[0] ? (
-                                <p className="text-2xl text-bold">
+                                <p className="text-2xl text-bold text-white">
                                     {directListing[0]?.currencyValuePerToken.displayValue}
                                     {" " + directListing[0]?.currencyValuePerToken.symbol}
                                 </p>
@@ -135,18 +124,43 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
                         
                     </div>
                    isLoaded={!loadingMarketplace || !loadingDirectListing}
+                    
                    <div className=" flex flex-rows py-4">
                             <Web3Button
                                 contractAddress={MARKETPLACE_ADDRESS}
                                 action={async () => buyListing()}
                                 isDisabled={(!directListing || !directListing[0])}
-                            >Buy at asking price</Web3Button>
-                            
+                            >Buy now</Web3Button>
+                         
                         </div>
+                       
+                       
                         </div>
                 </div>
+
+               
                 
+                <div className="box-content bg-green-500 py-2">
+                <p className="font-bold text-white"> Description:</p>
+                <p className="font-bold text-white">{nft.metadata.description}</p>
+                </div>
+
+
+
+
+
+
+                
+                            
+               
+
+                    </div>
+                    </div>
+                
+                    </div>
               
+
+
         
     )
 };

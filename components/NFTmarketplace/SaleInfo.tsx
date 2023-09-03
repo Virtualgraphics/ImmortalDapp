@@ -80,19 +80,19 @@ export default function SaleInfo({ nft }: Props) {
     
     return (
      
-                    <div className="flex flex-row py-4">
+                    <div className=" py-8">
                         <div className="box-content">
-                            <p className="text-md">Listing starts on:</p>
+                            <p className="py-2 text-white font-Jost">Listing starts on:</p>
 
-                            <input
+                            <input className="p-2 rounded-lg"
                                 placeholder="Select Date and Time"
                              
                                 type="datetime-local"
                                 {...registerDirect("startDate")}
                             />
 
-                            <p className="mt-2">Listing ends on:</p>
-                            <input
+                            <p className="py-2 text-white font-Jost">Listing ends on:</p>
+                            <input className="p-2 rounded-lg"
                                 placeholder="Select Date and Time"
                                
                                 type="datetime-local"
@@ -100,14 +100,16 @@ export default function SaleInfo({ nft }: Props) {
                             />
                         </div>
                         <div className="box-content">
-                            <p className="text-lg font-semibold font-Jost">Price:</p>
-                            <input
+                            <p className="text-lg font-Jost py-2">Price:</p>
+                            <input className="p-2 rounded-lg"
                                 placeholder="0"
                                
                                 type="number"
                                 {...registerDirect("price")}
                             />
                         </div>
+
+                        <div className="pt-8">
                         <Web3Button
                             contractAddress={MARKETPLACE_ADDRESS}
                             action={async () => {
@@ -116,7 +118,7 @@ export default function SaleInfo({ nft }: Props) {
                             onSuccess={(txResult) => {
                                 router.push(`/token/${NFT_COLLECTION_ADDRESS}/${nft.metadata.id}`);
                             }}
-                        >Create Direct Listing</Web3Button>
+                        >Create Direct Listing</Web3Button></div>
                     </div>
                  
                 
