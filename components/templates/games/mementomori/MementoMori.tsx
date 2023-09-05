@@ -8,18 +8,11 @@ import Link from 'next/link'
 import Image from 'next/image'
 import WebglGame from "../WebglGame";
 import React from "react";
-import { Unity, useUnityContext } from "react-unity-webgl";
+
+
 
 
 const MementoMori = () => {
-
-
-  const { unityProvider } = useUnityContext({
-    loaderUrl: "https://www.dropbox.com/scl/fi/2fh0hw3qb5li7ul5qg7f1/WEBGL.loader.js?rlkey=1oh3a37bg89mp8dmz19bjuih9&dl=0",
-    dataUrl: "https://www.dropbox.com/scl/fi/cshzk67goybnowcqariia/WEBGL.data?rlkey=z3hom1jjrks6v3ga7fvbcnl9w&dl=0",
-    frameworkUrl: "https://www.dropbox.com/scl/fi/fsx8a0xukw8t48n6v9dwr/WEBGL.framework.js?rlkey=edgln4cy0cvyw14q9q3zv7bf6&dl=0",
-    codeUrl: "https://www.dropbox.com/scl/fi/0reppfjlw33mlzstpshn9/WEBGL.wasm?rlkey=ubqo9832ef3k941u93r6swq1y&dl=0",
-  });
 
 
     const address = useAddress();
@@ -29,7 +22,6 @@ const MementoMori = () => {
     const { data: ownedVampires, isLoading: loadingOwnedVampires } = useOwnedNFTs(vampirecontract, address);
    
   
-    
     
     if (!address) {
 
@@ -60,10 +52,10 @@ const MementoMori = () => {
 
       return(
 
-        <div className="container-lg">
-          <div className="flex h-full justify-items-center items-center ">
+        <div className="container-lg flex justify-center mx-auto mt-96 ">
+         
             <Spinner />
-          </div>
+        
         </div>
       );
     }
@@ -112,7 +104,7 @@ const MementoMori = () => {
               <Image
               className="m-auto w-96 py-2"
               src="/assets/bat_divider.svg"
-              alt="BAt Divider"
+              alt="Bat Divider"
               width={1260}
               height={750}
             />
@@ -128,13 +120,29 @@ const MementoMori = () => {
            
           </div>
 
-          <div className="w-full ">
+
+ <div className="w-full justify-center m-auto flex ">
+   <div className="m-auto py-2 ">
+              <Image
+              className="m-auto w-3/4 border rounded-3xl"
+              src="/assets/immortal_rpg_screen.jpg"
+              alt="Game Screen"
+              width={1920}
+              height={1080}
+            />
+              </div>
 
 
-          <Unity unityProvider={unityProvider} />
+</div>
 
 
 
+
+          <div className="w-full justify-center m-auto flex mt-8 ">
+             <Link href="https://guileless-eclair-a1cd3f.netlify.app/">
+            <button className="bg-red-950 hover:bg-black text-yellow-100  w-40 h-12 px-4 rounded  text-xl text-Jost">
+ Play now
+</button></Link>
 
           </div>
 
