@@ -33,7 +33,7 @@ const Story = () => {
 <div className='font-Jost text-left text-white'>
   
 <p className='text-lg'>
-Kai, short for Kaisopol, is a royal, immortal vampire who is being targeted by the soul-eating demon Necrocorvo. The evil beast is holding Kai's consort Cirice captive in the castle Frosthaven. Necrocorvo has grown tired of feasting on human souls and wants to capture a vampire's immortal soul. Kai has to go on a quest through Therondia to confrom the powerful demon and be reunited with his beloved without running out of blood.
+Kai, short for Kaisopol, is a royal, immortal vampire who is being targeted by the soul-eating demon Necrocorvo. The evil beast is holding Kais consort Cirice captive in the castle Frosthaven. Necrocorvo has grown tired of feasting on human souls and wants to capture the immortal soul of a vampire. Kai has to go on a quest through Therondia to confrom the powerful demon and be reunited with his beloved without running out of blood.
 
 
 </p>
@@ -90,7 +90,7 @@ Kai, short for Kaisopol, is a royal, immortal vampire who is being targeted by t
 
   <div className='font-Jost text-left text-white text-md'>
 
-  <p className='text-lg'>The quest will see him pass the former capital of Moorholm, reclaim the powerful Sword of Skjaligrim from the lake of tears, necessary to give him the strength to confront Necrocorvo. He has to move through the dark Rabenwald, full of dangerous beasts and creatures, pass the pits to hell and make his way up into the snowy mountains of Therondia where the demon's lair, Frosthaven, lays. </p>
+  <p className='text-lg'>The quest will see him pass the former capital of Moorholm, reclaim the powerful Sword of Skjaligrim from the lake of tears, necessary to give him the strength to confront Necrocorvo. He has to move through the dark Rabenwald, full of dangerous beasts and creatures, pass the pits to hell and make his way up into the snowy mountains of Therondia where Frosthaven lays. </p>
     
   <p className='text-2xl text-yellow-100 pt-8'>All the best on your journey of immortality!
 
