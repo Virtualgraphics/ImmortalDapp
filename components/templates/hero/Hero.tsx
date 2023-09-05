@@ -16,13 +16,13 @@ const Hero = () => {
               <br className="hidden md:block" /> </h1>
 
               <h5 className="mb-4 text-2xl  leading-none text-white font-Jost" >
-              Vampire Survival Game
+              Vampire Soulslike NFT Game
               
             </h5>
             <p className="mb-6 text-white font-Jost">
-            Kai, a royal and very old vampire, must rescue his made Vampire consort Cirice from the clutches of Necrocorvo at Frosthaven Castle and get enough blood to sustain himself. The game is using
+            Kai, a royal and very old vampire, must rescue his made-vampire consort Cirice from the clutches of Necrocorvo at Frosthaven Castle and get enough blood to sustain himself. The game is using
             cutting edge blockchain technology in combination with a story-driven, 
-            multi-player RPG Metaverse, elements of DeFi and visual novels.
+            single-player RPG, elements of DeFi and visual novels.
             </p>
             <hr className="mb-5 border-gray-300" />
           

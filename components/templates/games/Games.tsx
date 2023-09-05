@@ -19,20 +19,21 @@ const Games = () => {
             />
               </div>
         
-            <h2 className="m-auto mb-4 text-3xl font-bold tracking-wide text-yellow-100 sm:text-4xl sm:leading-none sm:m-auto font-Metamorphous py-3">
+            <h2 className="m-auto mb-4 text-3xl  tracking-wide text-yellow-100 sm:text-4xl sm:leading-none sm:m-auto font-Metamorphous py-3">
           Immortal Coil: Memento Mori
             </h2>
             <hr className="w-full  border-yellow-200" />
             <p className="text-base text-white lg:text-xl md:text-lg sm:px-4 py-5 font-Jost">
-            Use your NFT Alien Character in a top-down single player RPG directly in your browser and collect tokens while powering up your Stargate in the DeFi Game.
+            Get rewards for missions and quests successfully accomplished in the Memento Mori RPG and Use various monsters to boost the powers of your vampires in the BLoodhunt DeFI game.
+
             </p>
            
           </div>
 
 
 <div className='flex items-center justify-center'>
-<h1 className='text-yellow-100 text-3xl font-bold mt-10 font-Jost'>
-The IMMORTAL COIL Games come in two variations:
+<h1 className='text-yellow-100 text-3xl mt-10 font-Jost'>
+The IMMORTAL COIL games come in two variations:
 </h1>
 </div>
 <GameCard/>

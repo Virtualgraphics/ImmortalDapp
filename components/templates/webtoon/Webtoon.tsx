@@ -32,6 +32,7 @@ const Webtoon = () => {
       "isCorrect",
       [address]
     );
+    
 
     return (
       
@@ -54,7 +55,7 @@ const Webtoon = () => {
           </h2>
           <hr className="w-4/6 mx-auto  border-yellow-200" />
           <p className="text-base text-white lg:text-lg  md:text-lg sm:px-4 py-2 font-Jost">
-         Claim your NFTs below and play the Immortal Coil Games and read the Webtoons. 
+         Claim your Bonus Signature NFT below by answering the question correctly and come back to read the weekly webtoons. 
           </p>
           </div>
           
@@ -112,6 +113,9 @@ const Webtoon = () => {
           height={750}
         />
           </div>
+
+<p className='text-white text-center pt-4'>Collect all 6 vampire signature bonus NFTs and redeem them for an exclusive Founders NFT!</p>
+
     </div>
 
 
@@ -209,7 +213,24 @@ const Webtoon = () => {
 </div>
 
 </div>
-</div>
+
+
+<div className="py-12 w-full justify-items-center mx-auto">
+
+  <h1 className="text-lg text-center text-white font-Jost py-2">Contract Addresses on Bscscan:</h1>
+            <p className="text-sm text-center text-white font-Jost px-2">
+             Signature Bonus NFTs: 0xd96778041f3655E4fF6727f66fd6fc45c34387c1
+            </p>
+            </div> 
+      </div>
+
+
+
+
+
+
+
+
 
     );
   };

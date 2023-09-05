@@ -157,56 +157,53 @@ const { contract } = useContract(MONSTERS_ADDRESS);
             )}
 
 
-<div className="pb-8 justify-items-center">
+<div className="pb-12  justify-items-center">
 
 <div className=" pt-14 m-auto  justify-center">
 <h1 className=" text-yellow-100 text-2xl text-center  font-Jost">
-          Use your IMMORTAL COIL NFTs for the following cool things:
-        </h1></div>
+              Use your IMMORTAL COIL tokens for the following cool things:
+            </h1></div>
 
-  <div className="w-4/5 m-auto grid gap-8 row-gap-5 md:row-gap-8 lg:grid-cols-3 mt-10 sm:grid-cols-2">
-    <div className="duration-300 transform bg-red-950/30 border-l-4 border-deep-purple-accent-900 hover:-translate-y-2 rounded-2xl">
-      <div className="h-full p-5 rounded-r shadow-sm">
-        <h6 className="mb-2 leading-5 text-yellow-200 font-Jost">Earn rewards in the RPG</h6>
-        <p className="text-sm text-white">
-          Get rewards for missions and quests successfully accomplished in the Stargazer RPG and trade tokens for in-game NFTs.
-        </p>
-      </div>
-    </div>
-    <div className="duration-300 transform bg-red-950/30 border-l-4 border-deep-purple-accent-400 hover:-translate-y-2 rounded-2xl">
-      <div className="h-full p-5  rounded-r shadow-sm">
-        <h6 className="mb-2  leading-5 text-yellow-200 font-Jost">Power up your Stargate</h6>
-        <p className="text-sm text-white">
-          Use the Stardust tokens to claim cosmic energy sources for your Stargate and get more STAR as a reward.
-        </p>
-      </div>
-    </div>
-    <div className="duration-300 transform bg-red-950/30 border-l-4 border-deep-purple-accent-400 hover:-translate-y-2 rounded-2xl">
-      <div className="h-full p-5  rounded-r shadow-sm">
-        <h6 className="mb-2 leading-5 text-yellow-200 font-Jost">Vote for your stories
-          
-        </h6>
-        <p className="text-sm text-white">
-          Use the tokens to participate in the anime and webtoons and get rewarded for a story path well-chosen.
-        </p>
-        
-      </div>
-    </div>
-    </div>
+      <div className="w-4/5 m-auto grid gap-8 row-gap-5 md:row-gap-8 lg:grid-cols-3 mt-10 sm:grid-cols-2">
+        <div className="duration-300 transform bg-red-950/30 border-l-4 border-deep-purple-accent-900 hover:-translate-y-2 rounded-2xl">
+          <div className="h-full p-5 rounded-r shadow-sm">
+            <h6 className="mb-2 leading-5 text-yellow-200 font-Jost">Earn rewards in the RPG</h6>
+            <p className="text-sm text-white">
+              Get rewards for missions and quests successfully accomplished in the Memento Mori RPG and trade tokens for in-game NFTs.
+            </p>
+          </div>
+        </div>
+        <div className="duration-300 transform bg-red-950/30 border-l-4 border-deep-purple-accent-400 hover:-translate-y-2 rounded-2xl">
+          <div className="h-full p-5  rounded-r shadow-sm">
+            <h6 className="mb-2  leading-5 text-yellow-200 font-Jost">Boost your Vampire</h6>
+            <p className="text-sm text-white">
+              Use various monsters to boost the powers of your vampire and earn $BLOOD tokens in the BLoodhunt DeFi game.</p>
+          </div>
+        </div>
+        <div className="duration-300 transform bg-red-950/30 border-l-4 border-deep-purple-accent-400 hover:-translate-y-2 rounded-2xl">
+          <div className="h-full p-5  rounded-r shadow-sm">
+            <h6 className="mb-2 leading-5 text-yellow-200 font-Jost">Win reward NFTs
+              
+            </h6>
+            <p className="text-sm text-white">
+              Use the tokens to participate in the anime and webtoons and get rewarded for each correctly answered question.
+            </p>
+            
+          </div>
+        </div>
+        </div>
 <div className="py-12 w-full justify-items-center mx-auto">
 
-<h1 className="text-lg text-center text-white font-Jost py-2">NFT contract address on Bscscan:</h1>
-        <p className="text-sm text-center text-white font-Jost px-2">
-          Immortal Coil Founders Edition: 0xD671735b14ddb2DA84433bf291f00355de068992
-
-        </p>
-
-        <p className="text-sm text-center text-white font-Jost py-2">
-          Blood Hunt Monster Edition: 0x7623dCee1c3De24129CC15a8398F7d8731bDAc
-        </p>
-        </div> 
-  </div>
-</div>
+  <h1 className="text-lg text-center text-white font-Jost py-2">Contract Addresses on Bscscan:</h1>
+            <p className="text-sm text-center text-white font-Jost px-2">
+             Founders Edition NFTs: 0xD671735b14ddb2DA84433bf291f00355de068992
+            </p>
+            <p className="text-sm text-center text-white font-Jost py-2">
+              Monster NFTs: 0x7623dCee1c3De24129CC15a8398F7d8731bDAccB
+            </p></div> 
+      </div>
+ </div>
+ 
 
 
   );

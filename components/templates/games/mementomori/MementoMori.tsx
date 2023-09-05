@@ -6,8 +6,21 @@ import { BigNumber, ethers } from "ethers";
 import Spinner from "../../../layouts/Spinner";
 import Link from 'next/link'
 import Image from 'next/image'
+import WebglGame from "../WebglGame";
+import React from "react";
+import { Unity, useUnityContext } from "react-unity-webgl";
+
 
 const MementoMori = () => {
+
+
+  const { unityProvider } = useUnityContext({
+    loaderUrl: "https://www.dropbox.com/scl/fi/2fh0hw3qb5li7ul5qg7f1/WEBGL.loader.js?rlkey=1oh3a37bg89mp8dmz19bjuih9&dl=0",
+    dataUrl: "https://www.dropbox.com/scl/fi/cshzk67goybnowcqariia/WEBGL.data?rlkey=z3hom1jjrks6v3ga7fvbcnl9w&dl=0",
+    frameworkUrl: "https://www.dropbox.com/scl/fi/fsx8a0xukw8t48n6v9dwr/WEBGL.framework.js?rlkey=edgln4cy0cvyw14q9q3zv7bf6&dl=0",
+    codeUrl: "https://www.dropbox.com/scl/fi/0reppfjlw33mlzstpshn9/WEBGL.wasm?rlkey=ubqo9832ef3k941u93r6swq1y&dl=0",
+  });
+
 
     const address = useAddress();
     const { contract: vampirecontract } = useContract(VAMPIRE_ADDRESS);
@@ -43,7 +56,10 @@ const MementoMori = () => {
     }
   
     if (loadingOwnedVampires) {
+
+
       return(
+
         <div className="container-lg">
           <div className="flex h-full justify-items-center items-center ">
             <Spinner />
@@ -112,7 +128,11 @@ const MementoMori = () => {
            
           </div>
 
-          <div className="w-full  bg-white h-96 rounded-3xl">
+          <div className="w-full ">
+
+
+          <Unity unityProvider={unityProvider} />
+
 
 
 

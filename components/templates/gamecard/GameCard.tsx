@@ -18,13 +18,12 @@ const GameCard = () => {
               <div className="absolute inset-0 bg-blue-900 bg-opacity-25" />
             </div>
             <div className="px-6 py-8 border border-t-0 rounded-b sm:px-8">
-              <h5 className="text-yellow-100 mb-2 text-xl font-bold leading-none sm:text-2xl">
+            <h5 className="text-yellow-100 mb-2 text-xl leading-none sm:text-2xl font-Jost">
               BLOODHUNT DEFI GAME
               </h5>
-              <p className="mb-5 text-gray-300">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque rem aperiam, eaque ipsa quae. Sed ut
-                perspiciatis unde.
+              <p className="mb-5 text-white text-lg font-Jost">
+              Use various monsters to boost the powers of your vampirea and earn $BLOOD tokens in the BLoodhunt DefI game.
+
               </p>
 
              
@@ -49,13 +48,11 @@ const GameCard = () => {
               <div className="absolute inset-0 bg-blue-900 bg-opacity-25" />
             </div>
             <div className="px-6 py-8 border border-t-0 rounded-b-lg sm:px-8">
-              <h5 className="text-yellow-100 mb-2 text-xl font-bold leading-none sm:text-2xl">
+              <h5 className="text-yellow-100 mb-2 text-xl leading-none sm:text-2xl font-Jost">
               MEMENTO MORI RPG
               </h5>
-              <p className="mb-5 text-gray-300">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque rem aperiam, eaque ipsa quae. Sed ut
-                perspiciatis unde.
+              <p className="mb-5 text-white text-lg font-Jost">
+              Get rewards for missions and quests successfully accomplished in the Memento Mori RPG and trade tokens for in-game NFTs.
               </p>
              
               <div className=" flex items-center justify-center py-4">

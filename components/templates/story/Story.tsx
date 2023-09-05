@@ -22,22 +22,23 @@ const Story = () => {
           The Legend of Therondia
           </h2>
           <hr className="w-3/5 mx-auto  border-yellow-200" />
-          <p className="text-base text-yellow-100 max-w-screen-lg lg:text-2xl  md:text-lg sm:px-4 py-8 font-Jost">
+          <p className="text-base text-yellow-100  lg:text-2xl  md:text-lg sm:px-4 py-8 font-Jost">
         
-          Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+          Immortal Coil is Gothic Vampire soulslike game and webtoon. This is the story of the vampire Kai and the land of Therondia...
           </p>
 
           <div className=" grid max-w-screen-lg row-gap-8 sm:text-center sm:mx-auto">
 
+
 <div className='font-Jost text-left text-white'>
-<p>
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, 
-    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap 
-    into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-     Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. 
+  
+<p className='text-lg'>
+Kai, short for Kaisopol, is a royal, immortal vampire who is being targeted by the soul-eating demon Necrocorvo. The evil beast is holding Kai's consort Cirice captive in the castle Frosthaven. Necrocorvo has grown tired of feasting on human souls and wants to capture a vampire's immortal soul. Kai has to go on a quest through Therondia to confrom the powerful demon and be reunited with his beloved without running out of blood.
 
 
 </p>
+
+
 
 
 </div>
@@ -87,14 +88,16 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
         </div>
   
 
-  <div className='font-Jost text-left text-white'>
+  <div className='font-Jost text-left text-white text-md'>
 
-  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrs standard dummy text ever since the 1500s, 
-    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap 
-    into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-     Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It has survived not only five centuries, but also the leap 
-    into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-     Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+  <p className='text-lg'>The quest will see him pass the former capital of Moorholm, reclaim the powerful Sword of Skjaligrim from the lake of tears, necessary to give him the strength to confront Necrocorvo. He has to move through the dark Rabenwald, full of dangerous beasts and creatures, pass the pits to hell and make his way up into the snowy mountains of Therondia where the demon's lair, Frosthaven, lays. </p>
+    
+  <p className='text-2xl text-yellow-100 pt-8'>All the best on your journey of immortality!
+
+
+</p>
+    
+    
      </div>
 
   
@@ -107,7 +110,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
       className="relative overflow-hidden bg-cover bg-no-repeat bg-[50%] rounded-3xl shadow-xl">
 
 <Image
-          className="m-auto w-auto shadow-xl"
+          className="shadow-xl"
           src="/assets/immortal_game.jpg"
           alt="Snow Castle"
           width={946}
@@ -120,7 +123,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
         <div className="flex h-full items-center justify-center">
           <div className="px-6 text-center text-yellow-100 md:px-12">
             <h2 className="mb-12 text-5xl  leading-tight tracking-wide font-Metamorphous">
-              Are you ready <br /><span>for an adventure</span>
+              Are you ready <br /><span>for an adventure?</span>
             </h2>
             <Link href="/nftmint">
                <button type="button"
