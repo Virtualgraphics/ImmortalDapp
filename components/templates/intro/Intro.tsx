@@ -52,9 +52,10 @@ const Intro = () => {
             Hunt down innocent victims and level up your blood level by drinking their blood. 
             </p>
             <div className=" flex items-center justify-center py-4">
+            <Link href="/games">
             <button className="bg-red-950 hover:bg-black text-yellow-200  w-40 h-12  px-4 rounded mt-1">
- Coming soon
-</button> </div>
+  Find out more
+</button></Link></div>
           </div>
           <div>
           <Image
@@ -71,10 +72,10 @@ const Intro = () => {
             Read the exciting story of Kais battle as an immortal Vampire and earn tokens by participating.
             </p>
             <div className=" flex items-center justify-center py-4">
-            
+            <Link href="/webtoon">
             <button className="bg-red-950 hover:bg-black text-yellow-200  w-40 h-12  px-4 rounded mt-1">
-  Coming soon
-</button> </div>
+  Find out more
+</button></Link></div>
           </div>
         </div>
       </div>
