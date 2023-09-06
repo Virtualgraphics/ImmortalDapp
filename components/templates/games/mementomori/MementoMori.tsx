@@ -139,7 +139,7 @@ const MementoMori = () => {
 
 
           <div className="w-full justify-center m-auto flex mt-8 ">
-             <Link href="https://guileless-eclair-a1cd3f.netlify.app/">
+             <Link href="https://flourishing-pothos-93567e.netlify.app">
             <button className="bg-red-950 hover:bg-black text-yellow-100  w-40 h-12 px-4 rounded  text-xl text-Jost">
  Play now
 </button></Link>

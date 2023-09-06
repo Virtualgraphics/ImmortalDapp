@@ -10,6 +10,9 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import Link from "next/link";
 import Spinner from '../../../components/layouts/Spinner';
 import MarketNav from '../../../components/NFTmarketplace/MarketNav';
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css'
+
 
 type Props = {
     nft: NFT;
@@ -63,12 +66,15 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
 
 
                     <div className="rounded-2xl  justify-center m-auto ">
-                       isLoaded={!loadingMarketplace && !loadingDirectListing}
+                     isLoaded={!loadingMarketplace && !loadingDirectListing}
                             <ThirdwebNftMedia
                                 metadata={nft.metadata}
                                 width="80%"
                                 height="80%"
-                            /></div>
+                                  />
+                           
+                            
+                            </div>
                           </div>
 
                           <div>
