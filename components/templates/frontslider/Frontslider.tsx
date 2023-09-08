@@ -5,11 +5,11 @@ import Image from 'next/image'
 
 const fadeImages = [
   {
-    url: 'https://www.virtual-graphics.ch/wp-content/uploads/2023/08/immortal_slides01.jpg',
+    url: 'https://www.virtual-graphics.ch/wp-content/uploads/2023/09/immortal_slide01.jpg',
     caption: ''
   },
   {
-    url: 'https://www.virtual-graphics.ch/wp-content/uploads/2023/08/immortal_slides02.jpg',
+    url: 'https://www.virtual-graphics.ch/wp-content/uploads/2023/09/immortal_slide04.jpg',
     caption: ''
   },
   {
