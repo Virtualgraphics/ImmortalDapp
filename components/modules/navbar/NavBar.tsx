@@ -45,28 +45,28 @@ function NavBar() {
      >
        <div className="text-md font-Proza lg:flex-grow">
 
-         <Link href="/" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4  text-red-600 hover:text-yellow-100 font-Proza text-lg font-semibold">
+         <Link href="/" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-6  text-red-600 hover:text-yellow-100 font-Proza text-lg font-semibold">
            COVEN
          </Link>
-         <Link href="story" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4  text-red-600 hover:text-yellow-100 font-Proza text-lg font-semibold">
+         <Link href="story" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-6  text-red-600 hover:text-yellow-100 font-Proza text-lg font-semibold">
            STORY
          </Link>
-         <Link href="games" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4  text-red-600 hover:text-yellow-100 font-Proza text-lg font-semibold">
+         <Link href="games" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-6  text-red-600 hover:text-yellow-100 font-Proza text-lg font-semibold">
            GAMES
          </Link>
-         <Link href="webtoon" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4  text-red-600 hover:text-yellow-100 font-Proza text-lg font-semibold">
+         <Link href="webtoon" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-6  text-red-600 hover:text-yellow-100 font-Proza text-lg font-semibold">
            WEBTOON
          </Link>
-         <Link href="crypt" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4  text-red-600 hover:text-yellow-100 font-Proza text-lg font-semibold">
+         <Link href="crypt" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-6  text-red-600 hover:text-yellow-100 font-Proza text-lg font-semibold">
            CRYPT
          </Link>
-         <Link href="nftmint" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4  text-red-600 hover:text-yellow-100 font-Proza text-lg font-semibold">
+         <Link href="nftmint" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-6  text-red-600 hover:text-yellow-100 font-Proza text-lg font-semibold">
            NFTs
          </Link>
-         <Link href="token" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4  text-red-600 hover:text-yellow-100 font-Proza text-lg font-semibold">
+         <Link href="token" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-6  text-red-600 hover:text-yellow-100 font-Proza text-lg font-semibold">
            TOKENS
          </Link>
-         <Link href="marketplace" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4  text-red-600 hover:text-yellow-100 font-Proza text-lg font-semibold">
+         <Link href="marketplace" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-6  text-red-600 hover:text-yellow-100 font-Proza text-lg font-semibold">
            MARKETPLACE
          </Link>
        </div>

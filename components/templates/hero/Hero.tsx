@@ -7,7 +7,7 @@ const Hero = () => {
     return (
 
       <>
-      <div className="bg-red-800/20 px-4 pt-10 pb-4 mx-auto sm:max-w-xl md:max-w-full  lg:w-3/4 md:px-24 lg:px-8 lg:py-10 rounded-3xl mt-10" >
+      <div className="bg-red-800/20 px-4 pt-10 pb-4 mx-auto sm:max-w-xl md:max-w-full  lg:w-3/4 md:px-24 lg:px-8 lg:py-10 rounded-3xl mt-10 h-full" >
         <div className="grid gap-10 lg:grid-cols-2">
           <div className="lg:pr-10">
             
@@ -42,7 +42,7 @@ const Hero = () => {
 
           <div >
             <Image
-              className="object-cover w-full h-56 rounded-3xl  sm:h-96 "
+              className="object-cover  "
               src="/assets/immortal_mainIMAGE.png"
               alt="Main Image"
               width={1260}
