@@ -15,11 +15,11 @@ const Hero = () => {
               IMMORTAL COIL
               <br className="hidden md:block" /> </h1>
 
-              <h5 className="mb-4 text-2xl  leading-none text-white font-Jost" >
+              <h5 className="mb-4 text-3xl  leading-none text-white font-Jost" >
               Vampire Soulslike NFT Game
               
             </h5>
-            <p className="mb-6 text-white font-Jost">
+            <p className="mb-6 text-white text-xl font-Jost">
             Kai, a royal and very old vampire, must rescue his made-vampire consort Cirice from the clutches of Necrocorvo at Frosthaven Castle and get enough blood to sustain himself. The game is using
             cutting edge blockchain technology in combination with a story-driven, 
             single-player RPG, elements of DeFi and visual novels.
