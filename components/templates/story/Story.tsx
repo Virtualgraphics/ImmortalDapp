@@ -4,7 +4,7 @@ import Image from 'next/image'
 const Story = () => {
     return (
       
-      <div className="justify-center  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-lg md:px-24 lg:px-8 lg:pt-20">
+      <div className="justify-center  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-lg md:px-24 lg:px-8 lg:pt-10">
       <div className=" grid max-w-screen-lg row-gap-5 sm:text-center sm:mx-auto">
         
 
@@ -79,10 +79,10 @@ Kai, short for Kaisopol, is a royal, immortal vampire who is being targeted by t
   <div className="m-auto w-auto rounded-2xl ">
           <Image
           className="m-auto w-auto rounded-2xl shadow-xl"
-          src="/assets/snow_castle.jpg"
-          alt="Snow Castle"
-          width={946}
-          height={751}
+          src="/assets/kai_screen01.jpg"
+          alt="Kai"
+          width={800}
+          height={666}
         />
         
         </div>

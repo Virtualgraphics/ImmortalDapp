@@ -94,24 +94,9 @@ const { contract } = useContract(MONSTERS_ADDRESS);
 
 <div className='w-60 flex items-center justify-center m-auto pb-12'>
 
-<Web3Button 
-          
-          
-          contractAddress={nftDrop?.getAddress() || ""}
-          action={(cntr) => cntr.erc721.claim(quantity)}
-       
-          onError={(err) => {
-            console.error(err);
-            alert("Error claiming NFTs");
-          }}
-          onSuccess={() => {
-            setQuantity(1);
-            alert("Successfully claimed NFTs");
-          }}
-        >
-        
-          Claim NFT
-        </Web3Button></div>
+<button className="bg-red-950 hover:bg-black text-yellow-200  w-40 h-12  px-4 rounded mt-1">
+  Coming soon
+</button></div>
      </div>
           </div>
 </div>
@@ -135,26 +120,16 @@ const { contract } = useContract(MONSTERS_ADDRESS);
         
        
 
-        <p className="text-base text-white lg:text-lg md:text-lg sm:px-4 pt-6 font-Jost">
+        <p className="text-base text-white lg:text-lg md:text-lg sm:px-4 pt-6 font-Jost ">
        Purchase MONSTER HUNT NFTs with $BLOOD to boost your Vampires power and gain more $BLOOD. 
         </p>
         </div>
+<div className="justify-center mx-auto flex pt-12">
+        <button className="bg-red-950 hover:bg-black text-yellow-200  w-40 h-12  px-4 rounded mt-1">
+  Coming soon
+</button></div>
         </div>
 
-            {!nfts ? (
-                <div className="flex justify-center mx-auto p-24">
-                    <Spinner />
-                </div>
-            ) : (
-                <div className="grid grid-cols-3 gap-4 ">
-                    {nfts?.map((nftItem) => (
-                        <MonsterNFT 
-                            key={nftItem.metadata.id}
-                            nft={nftItem}
-                        />
-                    ))}
-                </div>
-            )}
 
 
 <div className="pb-12  justify-items-center">
@@ -196,10 +171,10 @@ const { contract } = useContract(MONSTERS_ADDRESS);
 
   <h1 className="text-lg text-center text-white font-Jost py-2">Contract Addresses on Bscscan:</h1>
             <p className="text-sm text-center text-white font-Jost px-2">
-             Founders Edition NFTs: 0xD671735b14ddb2DA84433bf291f00355de068992
+             Founders Edition NFTs: Coming soon
             </p>
             <p className="text-sm text-center text-white font-Jost py-2">
-              Monster NFTs: 0x7623dCee1c3De24129CC15a8398F7d8731bDAccB
+              Monster NFTs: Coming soon
             </p></div> 
       </div>
  </div>

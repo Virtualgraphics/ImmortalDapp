@@ -15,7 +15,7 @@ const GameCard = () => {
               width={1260}
               height={750}
             />
-              <div className="absolute inset-0 bg-blue-900 bg-opacity-25" />
+              <div className="absolute inset-0 bg-blue-900 bg-opacity-0" />
             </div>
             <div className="px-6 py-8 border border-t-0 rounded-b sm:px-8">
             <h5 className="text-yellow-100 mb-2 text-xl leading-none sm:text-2xl font-Jost">
@@ -28,10 +28,9 @@ const GameCard = () => {
 
              
               <div className=" flex items-center justify-center py-4">
-            <Link href="/bloodhunt">
-            <button className="bg-red-950 hover:bg-black text-yellow-100  w-40 h-12 px-4 rounded  text-xl text-Jost">
- Play now
-</button></Link></div>
+            <button className="bg-red-950 hover:bg-black text-yellow-200  w-40 h-12  px-4 rounded mt-1">
+  Coming soon
+</button></div>
             
 
             </div>
@@ -45,7 +44,7 @@ const GameCard = () => {
               width={1260}
               height={750}
             />
-              <div className="absolute inset-0 bg-blue-900 bg-opacity-25" />
+              <div className="absolute inset-0 bg-blue-900 bg-opacity-0" />
             </div>
             <div className="px-6 py-8 border border-t-0 rounded-b-lg sm:px-8">
               <h5 className="text-yellow-100 mb-2 text-xl leading-none sm:text-2xl font-Jost">
@@ -56,10 +55,9 @@ const GameCard = () => {
               </p>
              
               <div className=" flex items-center justify-center py-4">
-            <Link href="/mementomori">
-            <button className="bg-red-950 hover:bg-black text-yellow-100  w-40 h-12 px-4 rounded  text-xl text-Jost">
- Play now
-</button></Link></div>
+              <button className="bg-red-950 hover:bg-black text-yellow-200  w-40 h-12  px-4 rounded mt-1">
+  Coming soon
+</button></div>
             
             </div>
           </div>

@@ -36,7 +36,7 @@ const Webtoon = () => {
 
     return (
       
-      <div className="justify-center pb-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-lg md:px-24 lg:px-8 lg:pt-20">
+      <div className="justify-center pb-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-lg md:px-24 lg:px-8 lg:pt-10">
       <div className=" grid max-w-screen-lg row-gap-5 sm:text-center sm:mx-auto">
         
 
@@ -60,8 +60,16 @@ const Webtoon = () => {
           </div>
           
 
-<div className='py-8'>
-<WebtoonSlider />
+<div className='my-8 rounded-3xl border border-yellow-100'>
+
+<Image
+          className="m-auto rounded-3xl"
+          src="/assets/webtoon_cover.jpg"
+          alt="Webtoon Cover"
+          width={1260}
+          height={750}
+        />
+
 </div>
 
 <div className='w-full  bg-black rounded-3xl p-8 '>
@@ -160,7 +168,7 @@ const Webtoon = () => {
     <div className=" flex items-center justify-center pt-4">
             
             <button className="bg-black hover:bg-red-700 text-yellow-200  w-40 h-12  px-4 rounded mt-1">
-  Read now
+  Coming soon
 </button></div>
 
 </div>
@@ -183,7 +191,7 @@ const Webtoon = () => {
     <div className=" flex items-center justify-center pt-4">
             
             <button className="bg-black hover:bg-red-700 text-yellow-200  w-40 h-12  px-4 rounded mt-1">
-  Read now
+  Coming soon
 </button></div>
 
  </div>
@@ -206,7 +214,7 @@ const Webtoon = () => {
     <div className=" flex items-center justify-center pt-4">
             
             <button className="bg-black hover:bg-red-700 text-yellow-200  w-40 h-12  px-4 rounded mt-1">
-  Read now
+  Coming soon
 </button></div>
 
 </div>
@@ -219,7 +227,7 @@ const Webtoon = () => {
 
   <h1 className="text-lg text-center text-white font-Jost py-2">Contract Addresses on Bscscan:</h1>
             <p className="text-sm text-center text-white font-Jost px-2">
-             Signature Bonus NFTs: 0xd96778041f3655E4fF6727f66fd6fc45c34387c1
+             Signature Bonus NFTs: Coming soon
             </p>
             </div> 
       </div>

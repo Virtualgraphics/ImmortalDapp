@@ -70,18 +70,9 @@ onChange={(e) => setAmountToClaim(e.target.value)}
 
 
 <div className='w-60 flex items-center justify-center m-auto'>
-<Web3Button 
-
-
-contractAddress="0x64D60B48B5E9Ae1D0889b6c397A73C0d3c540c1A"
-action={(contract) => contract.erc20.claim(amountToClaim)}
-onSuccess={() => alert("Claimed!")}
-onError={(err) => alert(err)}
-
->
-Claim IMRTL
-
-</Web3Button></div>
+<button className="bg-red-950 hover:bg-black text-yellow-200  w-40 h-12  px-4 rounded mt-1">
+  Coming soon
+</button></div>
 </div>
 
 <div className="bg-red-900/30 rounded-2xl w-72 drop-shadow-lg ">
@@ -115,18 +106,9 @@ className="flex-grow  h-10 px-2 mb-3 text-black text-base transitiom duration-20
    
    
     <div className='w-60 flex items-center justify-center m-auto pb-8'>
-    <Web3Button 
-        
-         
-          contractAddress="0x9798CDb5685622624165E7DF4E7613A46c4Cf1a0"
-          action={(contract) => contract.erc20.claim(amountToClaim)}
-          onSuccess={() => alert("Claimed!")}
-          onError={(err) => alert(err)}
-         
-        >
-          Claim BLOOD
-        
-          </Web3Button ></div>
+    <button className="bg-red-950 hover:bg-black text-yellow-200  w-40 h-12  px-4 rounded mt-1">
+  Coming soon
+</button></div>
          </div>
               </div>
 </div>
@@ -173,10 +155,10 @@ className="flex-grow  h-10 px-2 mb-3 text-black text-base transitiom duration-20
 
   <h1 className="text-lg text-center text-white font-Jost py-2">Contract Addresses on Bscscan:</h1>
             <p className="text-sm text-center text-white font-Jost px-2">
-              IMRTL: 0x94B0E73c4328A53ccc2CdeDbEeB2aF625984Af90
+              IMRTL: Coming soon
             </p>
             <p className="text-sm text-center text-white font-Jost py-2">
-              BLOOD: 0x94B0E73c4328A53ccc2CdeDbEeB2aF625984Af90
+              BLOOD: Coming soon
             </p></div> 
       </div>
  </div>

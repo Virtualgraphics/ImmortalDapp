@@ -39,13 +39,9 @@ export default function Quiz() {
                 </div>
                 ))}
                 <div className="py-4">
-                <Web3Button
-                contractAddress={CONTRACT_ADDRESS}
-                action={(contract) => contract.call(
-                    "answerQuestion",
-                    [answerIndex]
-                )}
-                >Submit Answer</Web3Button></div>
+                <button className="bg-red-950 hover:bg-black text-yellow-200  w-40 h-12  px-4 rounded mt-1">
+  Coming soon
+</button></div>
             </div>
             ) : (
             <p>Loading...</p>

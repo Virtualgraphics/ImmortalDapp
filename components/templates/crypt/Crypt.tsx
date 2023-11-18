@@ -142,8 +142,10 @@ const Crypt: NextPage = () => {
         <div className="pt-6 w-64">
 <h1 className="text-white font-Jost pb-8">Please connect a wallet and claim a Vampire Founders NFT to use the Crypt.</h1>
 
-
-        <ConnectWallet />
+<button className="bg-red-950 hover:bg-black text-yellow-200  w-40 h-12  px-4 rounded mt-1">
+  Coming soon
+</button>
+        
         </div>
       ) : (
         <>
@@ -176,12 +178,9 @@ const Crypt: NextPage = () => {
 
 
           <div className="py-8">
-          <Web3Button
-            action={(contract) => contract.call("claimRewards")}
-            contractAddress={stakingContractAddress}
-          >
-            Claim Rewards
-          </Web3Button>
+          <button className="bg-red-950 hover:bg-black text-yellow-200  w-40 h-12  px-4 rounded mt-1">
+  Coming soon
+</button>
           </div>
 
           <div className="max-w-screen-sm sm:text-center sm:mx-auto">
