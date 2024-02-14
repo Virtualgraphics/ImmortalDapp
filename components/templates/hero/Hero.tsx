@@ -20,7 +20,7 @@ const Hero = () => {
               <hr className="my-8 border-gray-300" />
             </h5>
             <p className="mb-6 text-white text-xl font-Jost">
-            Immortal Coil is Gothic Vampire Soulslike RPG and manga webtoon. Kai is a royal, immortal vampire who is being targeted by the soul-eating demon Necrocorvo. The evil beast is holding Kai's consort Cirice captive in the castle Frosthaven. Kai has to go on a quest through Therondia to confrom the powerful demon and be reunited with his beloved without running out of blood. Use this early asset in gaining more assets in the Immortaldapp.
+            Immortal Coil is Gothic Vampire Soulslike RPG and manga webtoon. Kai is a royal, immortal vampire who is being targeted by the soul-eating demon Necrocorvo. The evil beast is holding Kais consort Cirice captive in the castle Frosthaven. Kai has to go on a quest through Therondia to confrom the powerful demon and be reunited with his beloved without running out of blood. Use this early asset in gaining more assets in the Immortaldapp.
             </p>
            
             <p className="mb-6 text-white text-xl font-Jost">
