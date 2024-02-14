@@ -26,7 +26,7 @@ import React from 'react';
 import MonsterNFT from "../games/MonsterNFT";
 import Spinner from "../../layouts/Spinner";
 import Link from "next/link";
-const myNftDropContractAddress = "0xD671735b14ddb2DA84433bf291f00355de068992";
+const myNftDropContractAddress = "0x085448e399F633991B451E7d2ba7B2a4B97F6161";
 
 const NFTMint = () => {
 
@@ -57,12 +57,12 @@ const { contract } = useContract(MONSTERS_ADDRESS);
       />
         </div>
 
-        <h2 className="m-auto mb-4 text-3xl tracking-wide text-yellow-100 sm:text-4xl sm:leading-none sm:m-auto font-Metamorphous py-5">
-        IMMORTAL FOUNDERS EDITION
+        <h2 className="m-auto mb-4 text-2xl tracking-wide text-yellow-100 sm:text-4xl sm:leading-none sm:m-auto font-Metamorphous py-5">
+        IMMORTAL VAMPIRES KAI & CIRICE
         </h2>
         <hr className="w-4/6 mx-auto  border-yellow-200" />
         <p className="text-base text-white lg:text-lg  md:text-lg sm:px-4 py-4 font-Jost">
-       Claim your NFTs below and to play the Immortal Coil Games and read the Webtoons. 
+       Beautiful first NFT of Immortal Coil main vampires Kai and Cirice to be used in the Soulslike RPG and used to get BLOOD rewards.
         </p>
 
 <div className="flex justify-center ">
@@ -70,18 +70,18 @@ const { contract } = useContract(MONSTERS_ADDRESS);
 
 
 
-<div className="bg-red-900/30 rounded-3xl w-96 drop-shadow-3xl ">
+<div className="bg-red-900/30 rounded-3xl shadow-3xl ">
 
 
 <Image
-          className="pt-10 pb-6 px-10 mask mask-hexagon " 
-          src="/assets/immortal_collection_image.jpg"
-          alt="Immortal Founder Edition"
+          className=" justify-center flex m-auto pt-10 pb-6  w-3/4 rounded-xl " 
+          src="/assets/immortal_valentine.jpg"
+          alt="Immortal Vampire Edition"
           width={1500}
-          height={1500}
+          height={972}
         />
-
-<h1 className="text-yellow-100  text-lg font-Jost">Cost: 250 BLOOD</h1>
+<h1 className="text-yellow-100  text-lg font-Jost">Supply: 30 NFTs</h1>
+<h1 className="text-yellow-100  text-lg font-Jost">Cost: 0.045 BNB</h1>
 <h1 className="text-white  text-sm font-Jost">You can claim max. 3 NFTs per wallet</h1>
 
 
@@ -94,9 +94,26 @@ const { contract } = useContract(MONSTERS_ADDRESS);
 
 <div className='w-60 flex items-center justify-center m-auto pb-12'>
 
-<button className="bg-red-950 hover:bg-black text-yellow-200  w-40 h-12  px-4 rounded mt-1">
-  Coming soon
-</button></div>
+
+
+<Web3Button 
+          
+          
+          contractAddress={nftDrop?.getAddress() || ""}
+          action={(cntr) => cntr.erc721.claim(quantity)}
+       
+          onError={(err) => {
+            console.error(err);
+            alert("Error claiming NFTs");
+          }}
+          onSuccess={() => {
+            setQuantity(1);
+            alert("Successfully claimed NFTs");
+          }}
+        >
+        
+          Claim NFT
+        </Web3Button></div>
      </div>
           </div>
 </div>
