@@ -36,7 +36,7 @@ const Webtoon = () => {
 
     return (
       
-      <div className="justify-center pb-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-lg md:px-24 lg:px-8 lg:pt-10">
+      <div className="justify-center pb-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-lg md:px-24 lg:px-8 lg:pt-8">
       <div className=" grid max-w-screen-lg row-gap-5 sm:text-center sm:mx-auto">
         
 

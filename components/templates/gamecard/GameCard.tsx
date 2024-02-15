@@ -39,7 +39,7 @@ const GameCard = () => {
             <div className="relative">
             <Image
               className="object-cover w-full h-64 rounded-t lg:h-80 xl:h-96"
-              src="/assets/app_game_RPG_NEW.jpg"
+              src="/assets/app_game_RPG_02.jpg"
               alt="Immortal Coil RPG"
               width={1260}
               height={750}

@@ -5,7 +5,7 @@ import Image from 'next/image'
 const Games = () => {
  
     return (
-        <div className="justify-center px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-10">
+        <div className="justify-center px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-8">
           <div className="max-w-screen-sm sm:text-center sm:mx-auto">
             
     

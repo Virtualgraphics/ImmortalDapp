@@ -6,7 +6,7 @@ const MarketPlace = () => {
  
     return (
 
-        <div className="justify-center px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div className="justify-center px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-8">
           <div className="max-w-screen-sm sm:text-center sm:mx-auto">
             
     
@@ -21,7 +21,7 @@ const MarketPlace = () => {
             />
               </div>
         
-            <h2 className="m-auto pb-8 text-3xl tracking-wide text-yellow-100 sm:text-4xl sm:leading-none sm:m-auto font-Metamorphous py-3">
+            <h2 className="m-auto pb-8 text-2xl tracking-wide text-yellow-100 sm:text-4xl sm:leading-none sm:m-auto font-Metamorphous py-3">
          IMMORTAL MARKETPLACE
             </h2>
             <hr className="w-full  border-yellow-200" />

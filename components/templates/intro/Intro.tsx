@@ -16,7 +16,7 @@ const Intro = () => {
           <div >
           <Image
               className="object-cover w-full h-56 mb-6 rounded-2xl shadow-3xl sm:h-96 shadow-lg"
-              src="/assets/immortal_game.jpg"
+              src="/assets/app_game_RPG_02.jpg"
               alt="Main Image"
               width={1260}
               height={750}

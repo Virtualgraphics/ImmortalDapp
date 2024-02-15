@@ -78,7 +78,7 @@ const Crypt: NextPage = () => {
 
   return (
 
-    <div className="justify-center px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div className="justify-center px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:pt-8 pb-16">
 <div className="max-w-screen-xl sm:text-center sm:mx-auto">
             
     
