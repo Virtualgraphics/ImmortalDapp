@@ -81,7 +81,7 @@ const { contract } = useContract(MONSTERS_ADDRESS);
           height={972}
         />
 <h1 className="text-yellow-100  text-lg font-Jost">Supply: 30 NFTs</h1>
-<h1 className="text-yellow-100  text-lg font-Jost">Cost: 0.045 BNB</h1>
+<h1 className="text-yellow-100  text-lg font-Jost">Cost: 0.015 BNB</h1>
 <h1 className="text-white  text-sm font-Jost">You can claim max. 3 NFTs per wallet</h1>
 
 
