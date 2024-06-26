@@ -10,27 +10,28 @@ const GameCard = () => {
             <div className="relative">
             <Image
               className="object-cover w-full h-64 rounded-t lg:h-80 xl:h-96"
-              src="/assets/app_game_DEFI.jpg"
+              src="/assets/app_game_RPG01.jpg"
               alt="Immortal Coil Defi"
               width={1260}
               height={750}
             />
-              <div className="absolute inset-0 bg-blue-900 bg-opacity-0" />
+              <div className="absolute inset-0 bg-blue-900 bg-opacity-25" />
             </div>
             <div className="px-6 py-8 border border-t-0 rounded-b sm:px-8">
             <h5 className="text-yellow-100 mb-2 text-xl leading-none sm:text-2xl font-Jost">
-              BLOODHUNT DEFI GAME
+            INTO THE CRYPT VIDEO GAME
               </h5>
               <p className="mb-5 text-white text-lg font-Jost">
-              Use various monsters to boost the powers of your vampirea and earn $BLOOD tokens in the BLoodhunt DefI game.
+              Battle vicious Gargoyles to get back to your crypt in the cemetary while replenishing your blood supply. After accomplishing the mission, you will be rewarded in $BLOOD tokens.
 
               </p>
 
              
               <div className=" flex items-center justify-center py-4">
-            <button className="bg-red-950 hover:bg-black text-yellow-200  w-40 h-12  px-4 rounded mt-1">
-  Coming soon
-</button></div>
+              <Link href="/videogames">
+            <button className="bg-red-950 hover:bg-black text-yellow-100  w-40 h-12 px-4 rounded  text-xl text-Jost">
+ Play now
+</button></Link></div>
             
 
             </div>
@@ -39,25 +40,26 @@ const GameCard = () => {
             <div className="relative">
             <Image
               className="object-cover w-full h-64 rounded-t lg:h-80 xl:h-96"
-              src="/assets/app_game_RPG_02.jpg"
+              src="/assets/app_game_DEFI02.jpg"
               alt="Immortal Coil RPG"
               width={1260}
               height={750}
             />
-              <div className="absolute inset-0 bg-blue-900 bg-opacity-0" />
+              <div className="absolute inset-0 bg-blue-900 bg-opacity-25" />
             </div>
             <div className="px-6 py-8 border border-t-0 rounded-b-lg sm:px-8">
               <h5 className="text-yellow-100 mb-2 text-xl leading-none sm:text-2xl font-Jost">
-              MEMENTO MORI RPG
+              BLOODHUNT DEFI GAME
               </h5>
               <p className="mb-5 text-white text-lg font-Jost">
-              Get rewards for missions and quests successfully accomplished in the Memento Mori RPG and trade tokens for in-game NFTs.
+              Use various monsters to boost the powers of your vampires and earn $BLOOD tokens in this exciting idle BLoodhunt DefI game. All assets can be used in various parts of the app.
               </p>
              
               <div className=" flex items-center justify-center py-4">
-              <button className="bg-red-950 hover:bg-black text-yellow-200  w-40 h-12  px-4 rounded mt-1">
-  Coming soon
-</button></div>
+              <Link href="/bloodhunt">
+            <button className="bg-red-950 hover:bg-black text-yellow-100  w-40 h-12 px-4 rounded  text-xl text-Jost">
+ Play now
+</button></Link></div>
             
             </div>
           </div>

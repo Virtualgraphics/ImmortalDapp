@@ -8,11 +8,11 @@ function NavBar() {
  const [isOpen, setIsOpen] = useState(false);
 
  return (
-  <nav className="flex items-center justify-between flex-wrap p-6 border-b border-blue-200 bg-black">
-  <div className="flex items-center flex-shrink  lg:mr-8 lg:ml-8">
+   <nav className="flex items-center justify-between flex-wrap p-4 border-b border-yellow-100 bg-black">
+     <div className="flex items-center flex-shrink mr-12 lg:mr-72">
 
      <Image
-              className=" h-8 w-auto sm:w-auto justfy-left"
+              className=" h-10 w-auto lg:h40 lg:ml-10 sm:w-auto justfy-left"
               src="/assets/mortal_coil_logoAPP.svg"
               alt="Immortal Coil Logo"
               width={1260}
@@ -41,9 +41,9 @@ function NavBar() {
        </button>
      </div>
      <div
-       className={`w-full block align-baseline flex-grow lg:flex lg:items-center lg:w-auto ${isOpen ? "block" : "hidden"}`}
+       className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto ${isOpen ? "block" : "hidden"}`}
      >
-       <div className="text-md font-Proza lg:flex-grow align-baseline">
+       <div className="text-md font-Proza lg:flex-grow">
 
          <Link href="/" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-6  text-red-600 hover:text-yellow-100 font-Proza text-lg font-semibold">
            COVEN
@@ -57,18 +57,15 @@ function NavBar() {
          <Link href="webtoon" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-6  text-red-600 hover:text-yellow-100 font-Proza text-lg font-semibold">
            WEBTOON
          </Link>
-         <Link href="crypt" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-6  text-red-600 hover:text-yellow-100 font-Proza text-lg font-semibold">
-           CRYPT
-         </Link>
+      
          <Link href="nftmint" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-6  text-red-600 hover:text-yellow-100 font-Proza text-lg font-semibold">
            NFTs
          </Link>
-         <Link href="token" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-6  text-red-600 hover:text-yellow-100 font-Proza text-lg font-semibold">
-           TOKENS
-         </Link>
+       
          <Link href="marketplace" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-6  text-red-600 hover:text-yellow-100 font-Proza text-lg font-semibold">
            MARKETPLACE
          </Link>
+        
        </div>
        <div className="py-2 mr-12">
        <ConnectWallet />

@@ -4,27 +4,18 @@ import Image from 'next/image'
 const Story = () => {
     return (
       
-      <div className="justify-center  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-lg md:px-24 lg:px-8 lg:pt-8">
+      <div className="justify-center  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-lg md:px-24 lg:px-8 lg:pt-10">
       <div className=" grid max-w-screen-lg row-gap-5 sm:text-center sm:mx-auto">
         
 
-          <div className="m-auto w-96 py-2">
-          <Image
-          className="m-auto w-96 py-2"
-          src="/assets/bat_divider.svg"
-          alt="Bat Divider"
-          width={1260}
-          height={750}
-        />
-          </div>
 
           <h2 className="m-auto mb-4 text-3xl tracking-wide text-yellow-100 sm:text-4xl sm:leading-none sm:m-auto font-Metamorphous py-5">
           The Legend of Therondia
           </h2>
-          <hr className="w-3/5 mx-auto  border-yellow-200" />
-          <p className="text-base text-yellow-100  lg:text-2xl  md:text-lg sm:px-4 py-8 font-Jost">
+          <hr className="w-3/5 mx-auto py-4 border-yellow-200" />
+          <p className="text-base text-yellow-100  lg:text-2xl  md:text-lg sm:px-4 mb-4 font-Jost">
         
-          Immortal Coil is Gothic Vampire soulslike game and webtoon. This is the story of the vampire Kai and the land of Therondia...
+          Immortal Coil is Gothic Vampire Action RPG and Webtoon. This is the story of the vampire Kai and the land of Therondia...
           </p>
 
           <div className=" grid max-w-screen-lg row-gap-8 sm:text-center sm:mx-auto">
@@ -47,7 +38,7 @@ Kai, short for Kaisopol, is a royal, immortal vampire who is being targeted by t
 <div>
 <Image
           className="m-auto py-12 "
-          src="/assets/map_therondia.png"
+          src="/assets/map_therondia_new.png"
           alt="Therondia Map"
           width={1200}
           height={900}
@@ -79,10 +70,10 @@ Kai, short for Kaisopol, is a royal, immortal vampire who is being targeted by t
   <div className="m-auto w-auto rounded-2xl ">
           <Image
           className="m-auto w-auto rounded-2xl shadow-xl"
-          src="/assets/kai_screen01.jpg"
-          alt="Kai"
-          width={800}
-          height={666}
+          src="/assets/kai_image01.jpg"
+          alt="Snow Castle"
+          width={640}
+          height={480}
         />
         
         </div>
